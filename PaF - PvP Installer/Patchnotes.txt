@@ -1,0 +1,41 @@
+﻿Closed Beta 1.0.5
+==============================
+- Added French Language Keys (thanks to Pandamonium)
+- Added "everyone" as alternative to fight anyone
+- Added !clearteam command to clear your current team
+- Made some minor optimizations
+- Finished naming button variables
+
+
+Closed Beta V1.0.4:
+==============================
+
+- Adjusted video volumes
+- Option to disable attack animations
+- Option to allow only non legendarys in the teams
+- Reworked !setteam command (now also works with less than 6 pokemons)
+- Added !myteam / !team as alternate commands for !mypvp
+- Added !setslot * * as alternate command (like "!setslot 1 Bulbasaur")
+- Allows trainers that currently don't fight to change their team anytime
+- Channel Point icons added (made by ShadowEnigmaTV)
+- Removed " and new lines from names when someone is challenged
+- Adjusted Language Keys (Italian thanks to al3xzandru, German by Chrizzz_1508 & KeenePanik)
+- Added Comments
+- Disables Channel Point Rewards on LB2 closing / crashing
+
+
+Closed Beta V1.0.3:
+==============================
+
+- !pvp-setposition Rework
+- Show P2 invalid team message
+- Switch to a specific scene when a fight starts
+- Attack types can be included in the textbox message
+- Music ends correctly
+
+...
+
+Closed Beta V1.0
+================
+
+- Creation of the closed Beta
