@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pbLoading = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -116,6 +117,8 @@
             this.btnInstall = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSetItUpForMe = new System.Windows.Forms.Button();
+            this.TTExplanation = new System.Windows.Forms.ToolTip(this.components);
+            this.lblLoading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -130,7 +133,7 @@
             // 
             this.pbLoading.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
-            this.pbLoading.Location = new System.Drawing.Point(1192, 593);
+            this.pbLoading.Location = new System.Drawing.Point(0, -2);
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.Size = new System.Drawing.Size(1216, 609);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -218,6 +221,7 @@
             // 
             this.txtPriceRandom6v6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceRandom6v6.Location = new System.Drawing.Point(768, 346);
+            this.txtPriceRandom6v6.MaxLength = 6;
             this.txtPriceRandom6v6.Name = "txtPriceRandom6v6";
             this.txtPriceRandom6v6.Size = new System.Drawing.Size(139, 38);
             this.txtPriceRandom6v6.TabIndex = 93;
@@ -227,6 +231,7 @@
             // 
             this.txtPriceRandom3v3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceRandom3v3.Location = new System.Drawing.Point(768, 282);
+            this.txtPriceRandom3v3.MaxLength = 6;
             this.txtPriceRandom3v3.Name = "txtPriceRandom3v3";
             this.txtPriceRandom3v3.Size = new System.Drawing.Size(139, 38);
             this.txtPriceRandom3v3.TabIndex = 90;
@@ -236,6 +241,7 @@
             // 
             this.txtPriceNormal6v6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceNormal6v6.Location = new System.Drawing.Point(768, 220);
+            this.txtPriceNormal6v6.MaxLength = 6;
             this.txtPriceNormal6v6.Name = "txtPriceNormal6v6";
             this.txtPriceNormal6v6.Size = new System.Drawing.Size(139, 38);
             this.txtPriceNormal6v6.TabIndex = 87;
@@ -245,6 +251,7 @@
             // 
             this.txtPriceNormal3v3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceNormal3v3.Location = new System.Drawing.Point(768, 157);
+            this.txtPriceNormal3v3.MaxLength = 6;
             this.txtPriceNormal3v3.Name = "txtPriceNormal3v3";
             this.txtPriceNormal3v3.Size = new System.Drawing.Size(139, 38);
             this.txtPriceNormal3v3.TabIndex = 84;
@@ -254,6 +261,7 @@
             // 
             this.txtPriceChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceChamp.Location = new System.Drawing.Point(768, 95);
+            this.txtPriceChamp.MaxLength = 6;
             this.txtPriceChamp.Name = "txtPriceChamp";
             this.txtPriceChamp.Size = new System.Drawing.Size(139, 38);
             this.txtPriceChamp.TabIndex = 82;
@@ -457,7 +465,7 @@
             this.groupBox3.Controls.Add(this.lblLB2);
             this.groupBox3.Controls.Add(this.lblAttackAnimation);
             this.groupBox3.Controls.Add(this.cbAttackAnimation);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(13, 16);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(363, 433);
@@ -653,7 +661,7 @@
             // 
             this.lblLB2.AutoSize = true;
             this.lblLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLB2.Location = new System.Drawing.Point(6, 42);
+            this.lblLB2.Location = new System.Drawing.Point(6, 45);
             this.lblLB2.Name = "lblLB2";
             this.lblLB2.Size = new System.Drawing.Size(115, 20);
             this.lblLB2.TabIndex = 6;
@@ -700,7 +708,7 @@
             this.groupBox11.Controls.Add(this.cbFixedCoordinates);
             this.groupBox11.Controls.Add(this.txtSwitchName);
             this.groupBox11.Controls.Add(this.lblSwitchName);
-            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.Location = new System.Drawing.Point(402, 17);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(404, 432);
@@ -763,6 +771,7 @@
             this.cbDoSwitch.Name = "cbDoSwitch";
             this.cbDoSwitch.Size = new System.Drawing.Size(121, 28);
             this.cbDoSwitch.TabIndex = 44;
+            this.cbDoSwitch.SelectedIndexChanged += new System.EventHandler(this.cbDoSwitch_SelectedIndexChanged);
             // 
             // lblAllowedScenes
             // 
@@ -787,7 +796,7 @@
             // 
             this.txtPokemonSizeModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtPokemonSizeModifier.Location = new System.Drawing.Point(256, 175);
-            this.txtPokemonSizeModifier.MaxLength = 3;
+            this.txtPokemonSizeModifier.MaxLength = 5;
             this.txtPokemonSizeModifier.Name = "txtPokemonSizeModifier";
             this.txtPokemonSizeModifier.Size = new System.Drawing.Size(121, 26);
             this.txtPokemonSizeModifier.TabIndex = 47;
@@ -832,7 +841,7 @@
             // 
             this.txtSwitchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtSwitchName.Location = new System.Drawing.Point(256, 87);
-            this.txtSwitchName.MaxLength = 4;
+            this.txtSwitchName.MaxLength = 60;
             this.txtSwitchName.Name = "txtSwitchName";
             this.txtSwitchName.Size = new System.Drawing.Size(121, 26);
             this.txtSwitchName.TabIndex = 45;
@@ -862,7 +871,7 @@
             this.groupBox6.Controls.Add(this.txtAttackpowerMax);
             this.groupBox6.Controls.Add(this.lblAttackpowerMin);
             this.groupBox6.Controls.Add(this.txtAttackpowerMin);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(812, 17);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(375, 281);
@@ -1002,18 +1011,19 @@
             this.groupBox7.Controls.Add(this.lblCooldownTimer);
             this.groupBox7.Controls.Add(this.txtChallengeTimer);
             this.groupBox7.Controls.Add(this.lblChallengeTimer);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(812, 304);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(375, 145);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Time Settings";
+            this.groupBox7.Text = "Timer Settings";
             // 
             // txtCooldownTimer
             // 
             this.txtCooldownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtCooldownTimer.Location = new System.Drawing.Point(217, 87);
+            this.txtCooldownTimer.MaxLength = 5;
             this.txtCooldownTimer.Name = "txtCooldownTimer";
             this.txtCooldownTimer.Size = new System.Drawing.Size(121, 26);
             this.txtCooldownTimer.TabIndex = 34;
@@ -1034,6 +1044,7 @@
             // 
             this.txtChallengeTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtChallengeTimer.Location = new System.Drawing.Point(217, 51);
+            this.txtChallengeTimer.MaxLength = 5;
             this.txtChallengeTimer.Name = "txtChallengeTimer";
             this.txtChallengeTimer.Size = new System.Drawing.Size(121, 26);
             this.txtChallengeTimer.TabIndex = 33;
@@ -1064,12 +1075,12 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.lblVersion.Location = new System.Drawing.Point(38, 521);
+            this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.Location = new System.Drawing.Point(48, 531);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(151, 31);
+            this.lblVersion.Size = new System.Drawing.Size(139, 25);
             this.lblVersion.TabIndex = 109;
-            this.lblVersion.Text = "Version 1.0";
+            this.lblVersion.Text = "Version 1.0.0";
             // 
             // btnEnglishGuide
             // 
@@ -1113,14 +1124,15 @@
             this.btnInstall.TabIndex = 113;
             this.btnInstall.Text = "Install";
             this.btnInstall.UseVisualStyleBackColor = true;
+            this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label1.Location = new System.Drawing.Point(3, 563);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 565);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 31);
+            this.label1.Size = new System.Drawing.Size(190, 25);
             this.label1.TabIndex = 114;
             this.label1.Text = "© by chrizzz_1508";
             // 
@@ -1135,11 +1147,33 @@
             this.btnSetItUpForMe.UseVisualStyleBackColor = true;
             this.btnSetItUpForMe.Click += new System.EventHandler(this.btnSetItUpForMe_Click);
             // 
+            // TTExplanation
+            // 
+            this.TTExplanation.AutomaticDelay = 250;
+            this.TTExplanation.AutoPopDelay = 20000;
+            this.TTExplanation.InitialDelay = 250;
+            this.TTExplanation.ReshowDelay = 50;
+            // 
+            // lblLoading
+            // 
+            this.lblLoading.AutoSize = true;
+            this.lblLoading.BackColor = System.Drawing.Color.Black;
+            this.lblLoading.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoading.ForeColor = System.Drawing.Color.White;
+            this.lblLoading.Location = new System.Drawing.Point(262, 8);
+            this.lblLoading.Name = "lblLoading";
+            this.lblLoading.Size = new System.Drawing.Size(649, 55);
+            this.lblLoading.TabIndex = 116;
+            this.lblLoading.Text = "Installing now, please wait...";
+            this.lblLoading.Visible = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 610);
+            this.ClientSize = new System.Drawing.Size(1208, 606);
+            this.Controls.Add(this.pbLoading);
+            this.Controls.Add(this.lblLoading);
             this.Controls.Add(this.btnSetItUpForMe);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSupport);
@@ -1149,9 +1183,10 @@
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.btnGermanGuide);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.pbLoading);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "PaF - PvP Installer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -1215,7 +1250,6 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Label lblAllowedScenes;
         private System.Windows.Forms.Label lblSpawnSound;
-        private System.Windows.Forms.TextBox txtPokemonSizeModifier;
         private System.Windows.Forms.Label lblPokemonSizeModifier;
         private System.Windows.Forms.Label lblFixedCoordinates;
         private System.Windows.Forms.ComboBox cbFixedCoordinates;
@@ -1260,6 +1294,9 @@
         private System.Windows.Forms.Button btnInstall;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSetItUpForMe;
+        private System.Windows.Forms.TextBox txtPokemonSizeModifier;
+        private System.Windows.Forms.ToolTip TTExplanation;
+        private System.Windows.Forms.Label lblLoading;
     }
 }
 

@@ -1,4 +1,34 @@
-﻿Closed Beta 1.0.5
+﻿22.06.22 Update V1.0.1
+==============================
+
+Changes:
+
+- Changed the way !pvp-init works (now stops all the buttons first to prevent crashes)
+- Changed !setfight for mods (can only be triggered with a complete command)
+- Changed the way !fight works with limited scenes (!fight now only works in white listed scenes)
+- Installer now saves the LB2 location
+- Updated the link to the german tutorial video
+- Added 2 new attack animations (steel3 and fairy3)
+
+Bugfixes:
+
+- Fixed double names in the !top10victorys command
+- Fixed the trigger in the !pvp-setpostion command (previously !pvp-setpostion)
+- Fixed the trigger for !resetchamp
+- Fixed a bug for non affiliates not beeing able to start fights
+- Fixed a bug where fights did not disappear in non affiliate mode 
+- Fixed a bug to create Champ also in non affiliate mode
+- Fixed a small bug with sturdiness calculation
+- Fixed an error message when not pausing the base game
+
+
+Official Release V1.0.0
+==============================
+- Added update Check
+- Added spanish language keys (thanks to DrNiCoH)
+
+
+Closed Beta 1.0.5
 ==============================
 - Added French Language Keys (thanks to Pandamonium)
 - Added "everyone" as alternative to fight anyone

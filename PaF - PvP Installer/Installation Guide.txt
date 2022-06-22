@@ -1,0 +1,5 @@
+1) Make sure that the base game is installed
+2) Run the PaF - PvP Installer.exe and fill out your settings (you can hover the options for more infos)
+3) Start OBS and LB2 and make sure both are connected
+4) Inside LB2 install the newly created Extension (PaF_PvP_AddOn.lb2)
+5) Wait until everything is installed, might take up to 5min (A message will pop up when it was successful)
