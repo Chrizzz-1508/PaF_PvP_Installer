@@ -1,5 +1,22 @@
-1) Make sure that the base game is installed
-2) Run the PaF - PvP Installer.exe and fill out your settings (you can hover the options for more infos)
-3) Start OBS and LB2 and make sure both are connected
-4) Inside LB2 install the newly created Extension (PaF_PvP_AddOn.lb2)
+This extension only works with SAMMI Version 2022.4.0 or higher, so please make sure to update first!
+Also in case you have upgraded recently, make sure that you gain a new Twitch Token so that SAMMI has the needed permissions.
+
+New Installation:
+=================
+
+1) Make sure that V1.2.0+ of the PaF Mod is installed
+2) Run the PaF - PvP Installer.exe and fill out your settings and hit install (you can hover the options for more infos)
+3) Start OBS and SAMMI and make sure both are connected
+4) Inside SAMMI install the newly created Extension (PaF_PvP_AddOn.sef)
 5) Wait until everything is installed, might take up to 5min (A message will pop up when it was successful)
+
+Upgrading from V1.0:
+====================
+
+1) Delete all your existing PvP Channel Point Rewards
+2) Make sure that V1.2.0+ of the PaF Mod is installed
+3) Run the PaF - PvP Installer.exe and fill out your settings and hit install(you can hover the options for more infos)
+4) Start OBS and SAMMI and make sure both are connected
+5) Inside SAMMI install the newly created Extension (PaF_PvP_AddOn.sef)
+6) If you are asked if you want to recreate the channel points, say yes
+7) If you are asked if you want to recreate the scenes, say no

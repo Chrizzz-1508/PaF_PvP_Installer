@@ -1,4 +1,24 @@
-﻿22.06.22 Update V1.0.1
+﻿21.08.22 Update V1.1.0
+==============================
+- Added Gym Leader battles for 9 regions with over 100 challengers, defeating all challengers of a region gives you a permanent +1% catch rate
+  1)  Kanto
+  2)  Johto
+  3)  Hoenn
+  4)  Sinnoh
+  5)  Unova
+  6)  Kalos
+  7)  Alola
+  8)  Galar
+  10) Custom (the custom regions features special challengers like Professor Oak, Green and some of the people involved in this project)
+- Added the ability to increase the catchrate for the current champ
+- Limited teams to 1 mega or legendary Pokemon to keep the teams balanced
+- Added new commands (!shuffleteam, !kanto, !johto, ... , !galar, !customregion, !region 1, !poke-stats, !bonuscatchrate)
+- Added a lot of new attack animations (huge Shoutout to ShadowEnigmaTV)
+- Refunds the channel points of an ongoing fight in case you use !pvp-init, close SAMMI or when SAMMI crashes
+- Switched the version to a SAMMI compatible version (LB2 is not working anymore)
+- Switched database to CSV files (this AddOn now requires Version V1.2.0+ of the PaF Mod to run)
+
+22.06.22 Update V1.0.1
 ==============================
 
 Changes:
@@ -6,7 +26,7 @@ Changes:
 - Changed the way !pvp-init works (now stops all the buttons first to prevent crashes)
 - Changed !setfight for mods (can only be triggered with a complete command)
 - Changed the way !fight works with limited scenes (!fight now only works in white listed scenes)
-- Installer now saves the LB2 location
+- Installer now saves the SAMMI location
 - Updated the link to the german tutorial video
 - Added 2 new attack animations (steel3 and fairy3)
 
@@ -51,7 +71,7 @@ Closed Beta V1.0.4:
 - Removed " and new lines from names when someone is challenged
 - Adjusted Language Keys (Italian thanks to al3xzandru, German by Chrizzz_1508 & KeenePanik)
 - Added Comments
-- Disables Channel Point Rewards on LB2 closing / crashing
+- Disables Channel Point Rewards on SAMMI closing / crashing
 
 
 Closed Beta V1.0.3:

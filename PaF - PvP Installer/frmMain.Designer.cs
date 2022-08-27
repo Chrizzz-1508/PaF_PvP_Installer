@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pbLoading = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtPriceRegion = new System.Windows.Forms.TextBox();
+            this.txtRegion = new System.Windows.Forms.TextBox();
+            this.cbRegion = new System.Windows.Forms.ComboBox();
+            this.lblRegion = new System.Windows.Forms.Label();
             this.cbChamp = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,6 +61,9 @@
             this.lblChamp = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtBonusChamp = new System.Windows.Forms.TextBox();
+            this.lblBonusChamp = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbChampShuffle = new System.Windows.Forms.ComboBox();
             this.lblChampShuffle = new System.Windows.Forms.Label();
@@ -73,8 +80,8 @@
             this.cbPauseBaseGame = new System.Windows.Forms.ComboBox();
             this.lblPauseBaseGame = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtLB2 = new System.Windows.Forms.TextBox();
-            this.lblLB2 = new System.Windows.Forms.Label();
+            this.txtSAMMI = new System.Windows.Forms.TextBox();
+            this.lblSAMMI = new System.Windows.Forms.Label();
             this.lblAttackAnimation = new System.Windows.Forms.Label();
             this.cbAttackAnimation = new System.Windows.Forms.ComboBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -123,6 +130,7 @@
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -144,6 +152,10 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.Controls.Add(this.txtPriceRegion);
+            this.tabPage2.Controls.Add(this.txtRegion);
+            this.tabPage2.Controls.Add(this.cbRegion);
+            this.tabPage2.Controls.Add(this.lblRegion);
             this.tabPage2.Controls.Add(this.cbChamp);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
@@ -174,6 +186,49 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Channel Point Settings";
             // 
+            // txtPriceRegion
+            // 
+            this.txtPriceRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPriceRegion.Location = new System.Drawing.Point(776, 391);
+            this.txtPriceRegion.MaxLength = 6;
+            this.txtPriceRegion.Name = "txtPriceRegion";
+            this.txtPriceRegion.Size = new System.Drawing.Size(139, 38);
+            this.txtPriceRegion.TabIndex = 109;
+            this.txtPriceRegion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtRegion
+            // 
+            this.txtRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegion.Location = new System.Drawing.Point(352, 390);
+            this.txtRegion.MaxLength = 45;
+            this.txtRegion.Name = "txtRegion";
+            this.txtRegion.Size = new System.Drawing.Size(390, 38);
+            this.txtRegion.TabIndex = 108;
+            this.txtRegion.Text = "PvP - Challenge a Region";
+            // 
+            // cbRegion
+            // 
+            this.cbRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRegion.FormattingEnabled = true;
+            this.cbRegion.Items.AddRange(new object[] {
+            "Enabled",
+            "Disabled"});
+            this.cbRegion.Location = new System.Drawing.Point(945, 390);
+            this.cbRegion.Name = "cbRegion";
+            this.cbRegion.Size = new System.Drawing.Size(214, 39);
+            this.cbRegion.TabIndex = 110;
+            // 
+            // lblRegion
+            // 
+            this.lblRegion.AutoSize = true;
+            this.lblRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegion.Location = new System.Drawing.Point(26, 393);
+            this.lblRegion.Name = "lblRegion";
+            this.lblRegion.Size = new System.Drawing.Size(247, 31);
+            this.lblRegion.TabIndex = 107;
+            this.lblRegion.Text = "Use Gym Leaders";
+            // 
             // cbChamp
             // 
             this.cbChamp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -182,7 +237,7 @@
             this.cbChamp.Items.AddRange(new object[] {
             "Enabled",
             "Disabled"});
-            this.cbChamp.Location = new System.Drawing.Point(946, 94);
+            this.cbChamp.Location = new System.Drawing.Point(945, 75);
             this.cbChamp.Name = "cbChamp";
             this.cbChamp.Size = new System.Drawing.Size(214, 39);
             this.cbChamp.TabIndex = 83;
@@ -191,7 +246,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(940, 35);
+            this.label5.Location = new System.Drawing.Point(939, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 31);
             this.label5.TabIndex = 106;
@@ -201,7 +256,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(762, 35);
+            this.label4.Location = new System.Drawing.Point(770, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 31);
             this.label4.TabIndex = 105;
@@ -211,7 +266,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 35);
+            this.label3.Location = new System.Drawing.Point(346, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 31);
             this.label3.TabIndex = 104;
@@ -220,7 +275,7 @@
             // txtPriceRandom6v6
             // 
             this.txtPriceRandom6v6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceRandom6v6.Location = new System.Drawing.Point(768, 346);
+            this.txtPriceRandom6v6.Location = new System.Drawing.Point(776, 327);
             this.txtPriceRandom6v6.MaxLength = 6;
             this.txtPriceRandom6v6.Name = "txtPriceRandom6v6";
             this.txtPriceRandom6v6.Size = new System.Drawing.Size(139, 38);
@@ -230,7 +285,7 @@
             // txtPriceRandom3v3
             // 
             this.txtPriceRandom3v3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceRandom3v3.Location = new System.Drawing.Point(768, 282);
+            this.txtPriceRandom3v3.Location = new System.Drawing.Point(776, 264);
             this.txtPriceRandom3v3.MaxLength = 6;
             this.txtPriceRandom3v3.Name = "txtPriceRandom3v3";
             this.txtPriceRandom3v3.Size = new System.Drawing.Size(139, 38);
@@ -240,7 +295,7 @@
             // txtPriceNormal6v6
             // 
             this.txtPriceNormal6v6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceNormal6v6.Location = new System.Drawing.Point(768, 220);
+            this.txtPriceNormal6v6.Location = new System.Drawing.Point(776, 201);
             this.txtPriceNormal6v6.MaxLength = 6;
             this.txtPriceNormal6v6.Name = "txtPriceNormal6v6";
             this.txtPriceNormal6v6.Size = new System.Drawing.Size(139, 38);
@@ -250,7 +305,7 @@
             // txtPriceNormal3v3
             // 
             this.txtPriceNormal3v3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceNormal3v3.Location = new System.Drawing.Point(768, 157);
+            this.txtPriceNormal3v3.Location = new System.Drawing.Point(776, 137);
             this.txtPriceNormal3v3.MaxLength = 6;
             this.txtPriceNormal3v3.Name = "txtPriceNormal3v3";
             this.txtPriceNormal3v3.Size = new System.Drawing.Size(139, 38);
@@ -260,7 +315,7 @@
             // txtPriceChamp
             // 
             this.txtPriceChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceChamp.Location = new System.Drawing.Point(768, 95);
+            this.txtPriceChamp.Location = new System.Drawing.Point(776, 75);
             this.txtPriceChamp.MaxLength = 6;
             this.txtPriceChamp.Name = "txtPriceChamp";
             this.txtPriceChamp.Size = new System.Drawing.Size(139, 38);
@@ -270,7 +325,7 @@
             // txtRandom6v6
             // 
             this.txtRandom6v6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRandom6v6.Location = new System.Drawing.Point(344, 345);
+            this.txtRandom6v6.Location = new System.Drawing.Point(352, 327);
             this.txtRandom6v6.MaxLength = 45;
             this.txtRandom6v6.Name = "txtRandom6v6";
             this.txtRandom6v6.Size = new System.Drawing.Size(390, 38);
@@ -280,7 +335,7 @@
             // txtRandom3v3
             // 
             this.txtRandom3v3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRandom3v3.Location = new System.Drawing.Point(344, 282);
+            this.txtRandom3v3.Location = new System.Drawing.Point(352, 263);
             this.txtRandom3v3.MaxLength = 45;
             this.txtRandom3v3.Name = "txtRandom3v3";
             this.txtRandom3v3.Size = new System.Drawing.Size(390, 38);
@@ -290,7 +345,7 @@
             // txtNormal6v6
             // 
             this.txtNormal6v6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNormal6v6.Location = new System.Drawing.Point(344, 220);
+            this.txtNormal6v6.Location = new System.Drawing.Point(352, 202);
             this.txtNormal6v6.MaxLength = 45;
             this.txtNormal6v6.Name = "txtNormal6v6";
             this.txtNormal6v6.Size = new System.Drawing.Size(390, 38);
@@ -300,7 +355,7 @@
             // txtNormal3v3
             // 
             this.txtNormal3v3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNormal3v3.Location = new System.Drawing.Point(344, 157);
+            this.txtNormal3v3.Location = new System.Drawing.Point(352, 135);
             this.txtNormal3v3.MaxLength = 45;
             this.txtNormal3v3.Name = "txtNormal3v3";
             this.txtNormal3v3.Size = new System.Drawing.Size(390, 38);
@@ -310,7 +365,7 @@
             // txtChamp
             // 
             this.txtChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChamp.Location = new System.Drawing.Point(344, 95);
+            this.txtChamp.Location = new System.Drawing.Point(352, 75);
             this.txtChamp.MaxLength = 45;
             this.txtChamp.Name = "txtChamp";
             this.txtChamp.Size = new System.Drawing.Size(390, 38);
@@ -325,7 +380,7 @@
             this.cbRandom6v6.Items.AddRange(new object[] {
             "Enabled",
             "Disabled"});
-            this.cbRandom6v6.Location = new System.Drawing.Point(946, 345);
+            this.cbRandom6v6.Location = new System.Drawing.Point(945, 327);
             this.cbRandom6v6.Name = "cbRandom6v6";
             this.cbRandom6v6.Size = new System.Drawing.Size(214, 39);
             this.cbRandom6v6.TabIndex = 94;
@@ -338,7 +393,7 @@
             this.cbRandom3v3.Items.AddRange(new object[] {
             "Enabled",
             "Disabled"});
-            this.cbRandom3v3.Location = new System.Drawing.Point(946, 282);
+            this.cbRandom3v3.Location = new System.Drawing.Point(945, 264);
             this.cbRandom3v3.Name = "cbRandom3v3";
             this.cbRandom3v3.Size = new System.Drawing.Size(214, 39);
             this.cbRandom3v3.TabIndex = 91;
@@ -351,7 +406,7 @@
             this.cbNormal6v6.Items.AddRange(new object[] {
             "Enabled",
             "Disabled"});
-            this.cbNormal6v6.Location = new System.Drawing.Point(946, 219);
+            this.cbNormal6v6.Location = new System.Drawing.Point(945, 201);
             this.cbNormal6v6.Name = "cbNormal6v6";
             this.cbNormal6v6.Size = new System.Drawing.Size(214, 39);
             this.cbNormal6v6.TabIndex = 88;
@@ -364,7 +419,7 @@
             this.cbNormal3v3.Items.AddRange(new object[] {
             "Enabled",
             "Disabled"});
-            this.cbNormal3v3.Location = new System.Drawing.Point(946, 156);
+            this.cbNormal3v3.Location = new System.Drawing.Point(945, 138);
             this.cbNormal3v3.Name = "cbNormal3v3";
             this.cbNormal3v3.Size = new System.Drawing.Size(214, 39);
             this.cbNormal3v3.TabIndex = 85;
@@ -373,7 +428,7 @@
             // 
             this.lblRandom3v3.AutoSize = true;
             this.lblRandom3v3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRandom3v3.Location = new System.Drawing.Point(18, 285);
+            this.lblRandom3v3.Location = new System.Drawing.Point(25, 266);
             this.lblRandom3v3.Name = "lblRandom3v3";
             this.lblRandom3v3.Size = new System.Drawing.Size(192, 31);
             this.lblRandom3v3.TabIndex = 5;
@@ -383,7 +438,7 @@
             // 
             this.lblNormal3V3.AutoSize = true;
             this.lblNormal3V3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNormal3V3.Location = new System.Drawing.Point(18, 159);
+            this.lblNormal3V3.Location = new System.Drawing.Point(26, 140);
             this.lblNormal3V3.Name = "lblNormal3V3";
             this.lblNormal3V3.Size = new System.Drawing.Size(177, 31);
             this.lblNormal3V3.TabIndex = 3;
@@ -393,7 +448,7 @@
             // 
             this.lblRandom6v6.AutoSize = true;
             this.lblRandom6v6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRandom6v6.Location = new System.Drawing.Point(18, 349);
+            this.lblRandom6v6.Location = new System.Drawing.Point(26, 330);
             this.lblRandom6v6.Name = "lblRandom6v6";
             this.lblRandom6v6.Size = new System.Drawing.Size(192, 31);
             this.lblRandom6v6.TabIndex = 2;
@@ -403,7 +458,7 @@
             // 
             this.lblNormal6vs6.AutoSize = true;
             this.lblNormal6vs6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNormal6vs6.Location = new System.Drawing.Point(18, 223);
+            this.lblNormal6vs6.Location = new System.Drawing.Point(26, 204);
             this.lblNormal6vs6.Name = "lblNormal6vs6";
             this.lblNormal6vs6.Size = new System.Drawing.Size(177, 31);
             this.lblNormal6vs6.TabIndex = 1;
@@ -413,7 +468,7 @@
             // 
             this.lblChamp.AutoSize = true;
             this.lblChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChamp.Location = new System.Drawing.Point(18, 98);
+            this.lblChamp.Location = new System.Drawing.Point(25, 78);
             this.lblChamp.Name = "lblChamp";
             this.lblChamp.Size = new System.Drawing.Size(294, 31);
             this.lblChamp.TabIndex = 0;
@@ -433,6 +488,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox11);
             this.tabPage1.Controls.Add(this.groupBox6);
@@ -443,6 +499,39 @@
             this.tabPage1.Size = new System.Drawing.Size(1196, 455);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Game Settings";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtBonusChamp);
+            this.groupBox1.Controls.Add(this.lblBonusChamp);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(812, 378);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(375, 71);
+            this.groupBox1.TabIndex = 72;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Other Settings";
+            // 
+            // txtBonusChamp
+            // 
+            this.txtBonusChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtBonusChamp.Location = new System.Drawing.Point(217, 30);
+            this.txtBonusChamp.MaxLength = 5;
+            this.txtBonusChamp.Name = "txtBonusChamp";
+            this.txtBonusChamp.Size = new System.Drawing.Size(121, 26);
+            this.txtBonusChamp.TabIndex = 33;
+            this.txtBonusChamp.Text = "5";
+            this.txtBonusChamp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblBonusChamp
+            // 
+            this.lblBonusChamp.AutoSize = true;
+            this.lblBonusChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblBonusChamp.Location = new System.Drawing.Point(9, 33);
+            this.lblBonusChamp.Name = "lblBonusChamp";
+            this.lblBonusChamp.Size = new System.Drawing.Size(198, 20);
+            this.lblBonusChamp.TabIndex = 69;
+            this.lblBonusChamp.Text = "Champ Catchratebonus";
             // 
             // groupBox3
             // 
@@ -461,8 +550,8 @@
             this.groupBox3.Controls.Add(this.cbPauseBaseGame);
             this.groupBox3.Controls.Add(this.lblPauseBaseGame);
             this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Controls.Add(this.txtLB2);
-            this.groupBox3.Controls.Add(this.lblLB2);
+            this.groupBox3.Controls.Add(this.txtSAMMI);
+            this.groupBox3.Controls.Add(this.lblSAMMI);
             this.groupBox3.Controls.Add(this.lblAttackAnimation);
             this.groupBox3.Controls.Add(this.cbAttackAnimation);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -648,24 +737,24 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtLB2
+            // txtSAMMI
             // 
-            this.txtLB2.Enabled = false;
-            this.txtLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtLB2.Location = new System.Drawing.Point(236, 42);
-            this.txtLB2.Name = "txtLB2";
-            this.txtLB2.Size = new System.Drawing.Size(82, 26);
-            this.txtLB2.TabIndex = 1;
+            this.txtSAMMI.Enabled = false;
+            this.txtSAMMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSAMMI.Location = new System.Drawing.Point(236, 42);
+            this.txtSAMMI.Name = "txtSAMMI";
+            this.txtSAMMI.Size = new System.Drawing.Size(82, 26);
+            this.txtSAMMI.TabIndex = 1;
             // 
-            // lblLB2
+            // lblSAMMI
             // 
-            this.lblLB2.AutoSize = true;
-            this.lblLB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLB2.Location = new System.Drawing.Point(6, 45);
-            this.lblLB2.Name = "lblLB2";
-            this.lblLB2.Size = new System.Drawing.Size(115, 20);
-            this.lblLB2.TabIndex = 6;
-            this.lblLB2.Text = "LB2 Location";
+            this.lblSAMMI.AutoSize = true;
+            this.lblSAMMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSAMMI.Location = new System.Drawing.Point(6, 45);
+            this.lblSAMMI.Name = "lblSAMMI";
+            this.lblSAMMI.Size = new System.Drawing.Size(141, 20);
+            this.lblSAMMI.TabIndex = 6;
+            this.lblSAMMI.Text = "SAMMI Location";
             // 
             // lblAttackAnimation
             // 
@@ -874,7 +963,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(812, 17);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(375, 281);
+            this.groupBox6.Size = new System.Drawing.Size(375, 247);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Pokemon Stats Settings";
@@ -883,7 +972,7 @@
             // 
             this.lblSturdyChance.AutoSize = true;
             this.lblSturdyChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSturdyChance.Location = new System.Drawing.Point(16, 222);
+            this.lblSturdyChance.Location = new System.Drawing.Point(9, 216);
             this.lblSturdyChance.Name = "lblSturdyChance";
             this.lblSturdyChance.Size = new System.Drawing.Size(127, 20);
             this.lblSturdyChance.TabIndex = 51;
@@ -892,7 +981,7 @@
             // txtSturdyChance
             // 
             this.txtSturdyChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSturdyChance.Location = new System.Drawing.Point(217, 219);
+            this.txtSturdyChance.Location = new System.Drawing.Point(217, 213);
             this.txtSturdyChance.MaxLength = 3;
             this.txtSturdyChance.Name = "txtSturdyChance";
             this.txtSturdyChance.Size = new System.Drawing.Size(121, 26);
@@ -904,7 +993,7 @@
             // 
             this.lblDodgeChance.AutoSize = true;
             this.lblDodgeChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDodgeChance.Location = new System.Drawing.Point(16, 186);
+            this.lblDodgeChance.Location = new System.Drawing.Point(9, 180);
             this.lblDodgeChance.Name = "lblDodgeChance";
             this.lblDodgeChance.Size = new System.Drawing.Size(128, 20);
             this.lblDodgeChance.TabIndex = 49;
@@ -913,7 +1002,7 @@
             // txtDodgeChance
             // 
             this.txtDodgeChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDodgeChance.Location = new System.Drawing.Point(217, 183);
+            this.txtDodgeChance.Location = new System.Drawing.Point(217, 177);
             this.txtDodgeChance.MaxLength = 3;
             this.txtDodgeChance.Name = "txtDodgeChance";
             this.txtDodgeChance.Size = new System.Drawing.Size(121, 26);
@@ -925,7 +1014,7 @@
             // 
             this.lblCritChance.AutoSize = true;
             this.lblCritChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCritChance.Location = new System.Drawing.Point(16, 150);
+            this.lblCritChance.Location = new System.Drawing.Point(9, 144);
             this.lblCritChance.Name = "lblCritChance";
             this.lblCritChance.Size = new System.Drawing.Size(103, 20);
             this.lblCritChance.TabIndex = 47;
@@ -934,7 +1023,7 @@
             // txtCritChance
             // 
             this.txtCritChance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCritChance.Location = new System.Drawing.Point(217, 147);
+            this.txtCritChance.Location = new System.Drawing.Point(217, 141);
             this.txtCritChance.MaxLength = 3;
             this.txtCritChance.Name = "txtCritChance";
             this.txtCritChance.Size = new System.Drawing.Size(121, 26);
@@ -946,7 +1035,7 @@
             // 
             this.lblAttackIncrease.AutoSize = true;
             this.lblAttackIncrease.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAttackIncrease.Location = new System.Drawing.Point(16, 114);
+            this.lblAttackIncrease.Location = new System.Drawing.Point(9, 108);
             this.lblAttackIncrease.Name = "lblAttackIncrease";
             this.lblAttackIncrease.Size = new System.Drawing.Size(136, 20);
             this.lblAttackIncrease.TabIndex = 45;
@@ -955,7 +1044,7 @@
             // txtAttackIncrease
             // 
             this.txtAttackIncrease.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAttackIncrease.Location = new System.Drawing.Point(217, 111);
+            this.txtAttackIncrease.Location = new System.Drawing.Point(217, 105);
             this.txtAttackIncrease.MaxLength = 3;
             this.txtAttackIncrease.Name = "txtAttackIncrease";
             this.txtAttackIncrease.Size = new System.Drawing.Size(121, 26);
@@ -967,7 +1056,7 @@
             // 
             this.lblAttackpowerMax.AutoSize = true;
             this.lblAttackpowerMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAttackpowerMax.Location = new System.Drawing.Point(16, 78);
+            this.lblAttackpowerMax.Location = new System.Drawing.Point(9, 72);
             this.lblAttackpowerMax.Name = "lblAttackpowerMax";
             this.lblAttackpowerMax.Size = new System.Drawing.Size(194, 20);
             this.lblAttackpowerMax.TabIndex = 43;
@@ -976,7 +1065,7 @@
             // txtAttackpowerMax
             // 
             this.txtAttackpowerMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAttackpowerMax.Location = new System.Drawing.Point(217, 75);
+            this.txtAttackpowerMax.Location = new System.Drawing.Point(217, 69);
             this.txtAttackpowerMax.MaxLength = 3;
             this.txtAttackpowerMax.Name = "txtAttackpowerMax";
             this.txtAttackpowerMax.Size = new System.Drawing.Size(121, 26);
@@ -988,7 +1077,7 @@
             // 
             this.lblAttackpowerMin.AutoSize = true;
             this.lblAttackpowerMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAttackpowerMin.Location = new System.Drawing.Point(16, 42);
+            this.lblAttackpowerMin.Location = new System.Drawing.Point(9, 36);
             this.lblAttackpowerMin.Name = "lblAttackpowerMin";
             this.lblAttackpowerMin.Size = new System.Drawing.Size(190, 20);
             this.lblAttackpowerMin.TabIndex = 41;
@@ -997,7 +1086,7 @@
             // txtAttackpowerMin
             // 
             this.txtAttackpowerMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAttackpowerMin.Location = new System.Drawing.Point(217, 41);
+            this.txtAttackpowerMin.Location = new System.Drawing.Point(217, 35);
             this.txtAttackpowerMin.MaxLength = 3;
             this.txtAttackpowerMin.Name = "txtAttackpowerMin";
             this.txtAttackpowerMin.Size = new System.Drawing.Size(121, 26);
@@ -1012,9 +1101,9 @@
             this.groupBox7.Controls.Add(this.txtChallengeTimer);
             this.groupBox7.Controls.Add(this.lblChallengeTimer);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(812, 304);
+            this.groupBox7.Location = new System.Drawing.Point(812, 270);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(375, 145);
+            this.groupBox7.Size = new System.Drawing.Size(375, 104);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Timer Settings";
@@ -1022,7 +1111,7 @@
             // txtCooldownTimer
             // 
             this.txtCooldownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtCooldownTimer.Location = new System.Drawing.Point(217, 87);
+            this.txtCooldownTimer.Location = new System.Drawing.Point(217, 66);
             this.txtCooldownTimer.MaxLength = 5;
             this.txtCooldownTimer.Name = "txtCooldownTimer";
             this.txtCooldownTimer.Size = new System.Drawing.Size(121, 26);
@@ -1034,7 +1123,7 @@
             // 
             this.lblCooldownTimer.AutoSize = true;
             this.lblCooldownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCooldownTimer.Location = new System.Drawing.Point(16, 90);
+            this.lblCooldownTimer.Location = new System.Drawing.Point(9, 69);
             this.lblCooldownTimer.Name = "lblCooldownTimer";
             this.lblCooldownTimer.Size = new System.Drawing.Size(162, 20);
             this.lblCooldownTimer.TabIndex = 71;
@@ -1043,7 +1132,7 @@
             // txtChallengeTimer
             // 
             this.txtChallengeTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtChallengeTimer.Location = new System.Drawing.Point(217, 51);
+            this.txtChallengeTimer.Location = new System.Drawing.Point(217, 30);
             this.txtChallengeTimer.MaxLength = 5;
             this.txtChallengeTimer.Name = "txtChallengeTimer";
             this.txtChallengeTimer.Size = new System.Drawing.Size(121, 26);
@@ -1055,7 +1144,7 @@
             // 
             this.lblChallengeTimer.AutoSize = true;
             this.lblChallengeTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblChallengeTimer.Location = new System.Drawing.Point(16, 54);
+            this.lblChallengeTimer.Location = new System.Drawing.Point(9, 33);
             this.lblChallengeTimer.Name = "lblChallengeTimer";
             this.lblChallengeTimer.Size = new System.Drawing.Size(164, 20);
             this.lblChallengeTimer.TabIndex = 69;
@@ -1080,7 +1169,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(139, 25);
             this.lblVersion.TabIndex = 109;
-            this.lblVersion.Text = "Version 1.0.0";
+            this.lblVersion.Text = "Version 1.1.0";
             // 
             // btnEnglishGuide
             // 
@@ -1193,6 +1282,8 @@
             this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -1243,8 +1334,8 @@
         private System.Windows.Forms.ComboBox cbPauseBaseGame;
         private System.Windows.Forms.Label lblPauseBaseGame;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtLB2;
-        private System.Windows.Forms.Label lblLB2;
+        private System.Windows.Forms.TextBox txtSAMMI;
+        private System.Windows.Forms.Label lblSAMMI;
         private System.Windows.Forms.Label lblAttackAnimation;
         private System.Windows.Forms.ComboBox cbAttackAnimation;
         private System.Windows.Forms.GroupBox groupBox11;
@@ -1297,6 +1388,13 @@
         private System.Windows.Forms.TextBox txtPokemonSizeModifier;
         private System.Windows.Forms.ToolTip TTExplanation;
         private System.Windows.Forms.Label lblLoading;
+        private System.Windows.Forms.TextBox txtPriceRegion;
+        private System.Windows.Forms.TextBox txtRegion;
+        private System.Windows.Forms.ComboBox cbRegion;
+        private System.Windows.Forms.Label lblRegion;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtBonusChamp;
+        private System.Windows.Forms.Label lblBonusChamp;
     }
 }
 

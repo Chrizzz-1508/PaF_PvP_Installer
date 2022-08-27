@@ -470,12 +470,60 @@ namespace PaF___PvP_Installer.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string LB2Location {
+        public string SAMMILocation {
             get {
-                return ((string)(this["LB2Location"]));
+                return ((string)(this["SAMMILocation"]));
             }
             set {
-                this["LB2Location"] = value;
+                this["SAMMILocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PvP - Challenge a region")]
+        public string Region {
+            get {
+                return ((string)(this["Region"]));
+            }
+            set {
+                this["Region"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public string PriceRegion {
+            get {
+                return ((string)(this["PriceRegion"]));
+            }
+            set {
+                this["PriceRegion"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int UseRegion {
+            get {
+                return ((int)(this["UseRegion"]));
+            }
+            set {
+                this["UseRegion"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public string BonusChamp {
+            get {
+                return ((string)(this["BonusChamp"]));
+            }
+            set {
+                this["BonusChamp"] = value;
             }
         }
     }

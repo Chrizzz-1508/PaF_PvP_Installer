@@ -69,7 +69,13 @@ namespace PaF___PvP_Installer
             txtPriceRandom6v6.Text = Properties.Settings.Default.PriceRandom6v6;
             cbRandom6v6.SelectedIndex = Properties.Settings.Default.UseRandom6v6;
 
-            txtLB2.Text = Properties.Settings.Default.LB2Location;
+            txtRegion.Text = Properties.Settings.Default.Region;
+            txtPriceRegion.Text = Properties.Settings.Default.PriceRegion;
+            cbRegion.SelectedIndex = Properties.Settings.Default.UseRegion;
+
+            txtBonusChamp.Text = Properties.Settings.Default.BonusChamp;
+
+            txtSAMMI.Text = Properties.Settings.Default.SAMMILocation;
 
             #endregion
 
@@ -94,7 +100,7 @@ namespace PaF___PvP_Installer
 
         private void btnEnglishGuide_Click(object sender, EventArgs e)
         {
-            Process.Start(@"https://youtu.be/cYrbCoSi8dw");
+            Process.Start(@"https://youtu.be/Ta_VgE-DO1o");
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -111,13 +117,13 @@ namespace PaF___PvP_Installer
             try
             {
                 FolderBrowserDialog fb = new FolderBrowserDialog();
-                fb.Description = "Select your LB2 folder\nIt should contain the LioranBoard 2.0.exe and the Pokemon and Friends Folder from the base Game";
+                fb.Description = "Please select your SAMMI folder.\nThe SAMMI folder should contain the SAMMI Core.exe and the Pokemon and Friends Folder from the base Game";
 
                 if (fb.ShowDialog() == DialogResult.OK)
                 {
-                    if (!Directory.Exists(fb.SelectedPath + "\\transmitter") || !File.Exists(fb.SelectedPath + "\\LioranBoard 2.0.exe"))
+                    if (!File.Exists(fb.SelectedPath + "\\SAMMI Core.exe"))
                     {
-                        MessageBox.Show("Unfortunately this is not the LB2 folder.\nThe LB2 folder contains a transmitter folder and the Lioranboard 2.0.exe.\nPlease select the correct folder.");
+                        MessageBox.Show("Migration failed.\nUnfortunately this is not the SAMMI folder.\nThe SAMMI folder must contain the SAMMI Core.exe.\nPlease try again and select the correct folder.");
                         btnSearch_Click(null, null);
                         return;
                     }
@@ -129,13 +135,13 @@ namespace PaF___PvP_Installer
                             btnSearch_Click(null, null);
                             return;
                         }
-                        txtLB2.Text = fb.SelectedPath;
+                        txtSAMMI.Text = fb.SelectedPath;
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Can't access the file. Please close the .ini File and Lioaran Board first." + ex.ToString());
+                MessageBox.Show("Can't access the file. Please close the .ini File and SAMMI first." + ex.ToString());
             }
         }
 
@@ -218,14 +224,20 @@ namespace PaF___PvP_Installer
             Properties.Settings.Default.PriceRandom6v6 = txtPriceRandom6v6.Text;
             Properties.Settings.Default.UseRandom6v6 = cbRandom6v6.SelectedIndex;
 
-            Properties.Settings.Default.LB2Location = txtLB2.Text;
+            Properties.Settings.Default.Region = txtRegion.Text;
+            Properties.Settings.Default.PriceRegion = txtPriceRegion.Text;
+            Properties.Settings.Default.UseRegion = cbRegion.SelectedIndex;
+
+            Properties.Settings.Default.BonusChamp = txtBonusChamp.Text;
+
+            Properties.Settings.Default.SAMMILocation = txtSAMMI.Text;
 
             Properties.Settings.Default.Save();
         }
 
         private void SetToolTips()
         {
-            TTExplanation.SetToolTip(lblLB2, "Please select your LB2 location.\n It needs to have the Pokemon and Friends Mod installed already.");
+            TTExplanation.SetToolTip(lblSAMMI, "Please select your SAMMI location.\n It needs to have the Pokemon and Friends Mod installed already.");
             TTExplanation.SetToolTip(lblAttackAnimation, "Select the kind of attack Movement which the Pokemons should make.");
             TTExplanation.SetToolTip(lblPauseBaseGame, "Pause the catching game when a PvP fight is running.");
             TTExplanation.SetToolTip(lblUsePokemonGifs, "Use Gifs for the Pokemons when they exist.\nElse PNG files will be used.");
@@ -253,6 +265,9 @@ namespace PaF___PvP_Installer
             TTExplanation.SetToolTip(lblNormal6vs6, "Channel Point Name for the 6vs6 Battle with their own Pokemon.\nViewers will need to set their team first.");
             TTExplanation.SetToolTip(lblRandom3v3, "Channel Point Name for the 3vs3 Battle with Random Pokemon.\nViewers will get random Pokemons which they don't need\nto have caught and fight with them.");
             TTExplanation.SetToolTip(lblRandom6v6,"Channel Point Name for the 6vs6 Battle with Random Pokemon.\nViewers will get random Pokemons which they don't need\nto have caught and fight with them.");
+            TTExplanation.SetToolTip(lblRegion, "Channel Point Name for the Gym Battles.\niewers will need to set their team first.\nDefeating all challengers of a region\nwill award a permanent bonus catchrate.");
+
+            TTExplanation.SetToolTip(lblBonusChamp, "Amount in percent of the catchrate\nincrease for the current champ.");
         }
 
         private void btnInstall_Click(object sender, EventArgs e)
@@ -265,7 +280,7 @@ namespace PaF___PvP_Installer
             pbLoading.Visible = true;
             lblLoading.Parent = pbLoading;
             lblLoading.Visible = true;
-            CreateLB2Extension();
+            CreateSAMMIExtension();
             Thread t = new Thread(CopyFiles);
             t.Start();
             while (t.IsAlive)
@@ -275,11 +290,11 @@ namespace PaF___PvP_Installer
             }
             pbLoading.Visible = false;
 
-            MessageBox.Show("Installation completed.\n\nNext please Install the PaF_PvP_AddOn.lb2 Extension from your \"LB2 => Pokemon and Friends\" folder.");
+            MessageBox.Show("Installation completed.\n\nNext please Install the PaF_PvP_AddOn.sef Extension from your \"SAMMI => Pokemon and Friends\" folder.");
 
         }
 
-        private void CreateLB2Extension()
+        private void CreateSAMMIExtension()
         {
             string VAR_ATTACK_ANIMATION_VAR = "";
             switch (cbAttackAnimation.SelectedIndex)
@@ -318,6 +333,8 @@ namespace PaF___PvP_Installer
             string VAR_6v6R_USE_VAR = "true";
             if (cbRandom6v6.SelectedIndex == 1) VAR_6v6R_USE_VAR = "false";
 
+            string VAR_REGION_USE_VAR = "true";
+            if (cbRegion.SelectedIndex == 1) VAR_REGION_USE_VAR = "false";
 
             string VAR_STOP_BASE_GAME_VAR = "true";
             if (cbPauseBaseGame.SelectedIndex == 1) VAR_STOP_BASE_GAME_VAR = "false";
@@ -366,6 +383,10 @@ namespace PaF___PvP_Installer
             s = s.Replace("VAR_6v6R_PRICE_VAR", txtPriceRandom6v6.Text);
             s = s.Replace("VAR_6v6R_USE_VAR", VAR_6v6R_USE_VAR);
 
+            s = s.Replace("VAR_REGION_NAME_VAR", txtRegion.Text);
+            s = s.Replace("VAR_REGION_PRICE_VAR", txtPriceRegion.Text);
+            s = s.Replace("VAR_REGION_USE_VAR", VAR_REGION_USE_VAR);
+
             s = s.Replace("VAR_ATTACK_ANIMATION_VAR", VAR_ATTACK_ANIMATION_VAR);
             s = s.Replace("VAR_STOP_BASE_GAME_VAR", VAR_STOP_BASE_GAME_VAR);
             s = s.Replace("VAR_USE_POKEMON_GIFS_VAR", VAR_USE_POKEMON_GIFS_VAR);
@@ -374,6 +395,7 @@ namespace PaF___PvP_Installer
             s = s.Replace("VAR_LOW_SPEC_VAR", VAR_LOW_SPEC_VAR);
             s = s.Replace("VAR_ALLOW_LEGENDARYS_VAR", VAR_ALLOW_LEGENDARYS_VAR);
             s = s.Replace("VAR_SHUFFLE_CHAMP_VAR", VAR_SHUFFLE_CHAMP_VAR);
+            s = s.Replace("VAR_BONUS_CHAMP_VAR", txtBonusChamp.Text);
 
             s = s.Replace("VAR_CHALLENGE_TIMER_VAR", txtChallengeTimer.Text);
             s = s.Replace("VAR_COOLDOWN_TIMER_VAR", txtCooldownTimer.Text);
@@ -414,10 +436,10 @@ namespace PaF___PvP_Installer
                 s = s.Replace("VAR_SIZE_MODIFIER_VAR", "1");
             }
 
-            s = s.Replace("\"include_image\": { }", "\"include_image\": { } ,\"transmitter\":true, \"lioranboard_version\":\"2.07.9\", \"extension_triggers\":[\"PVP_INSTALL\"]}");
+            s = s.Replace("\"include_image\": { }", "\"include_image\": { } ,\"transmitter\":true, \"sammi_version\":\"2022.4.0\", \"extension_triggers\":[\"PVP_INSTALL\"], \"required_extension\":[\"PokemonAndFriend Mod\"] }");
 
 
-            using (StreamWriter sw = new StreamWriter(txtLB2.Text + @"\Pokemon and Friends\PaF_PvP_AddOn.lb2"))
+            using (StreamWriter sw = new StreamWriter(txtSAMMI.Text + @"\Pokemon and Friends\PaF_PvP_AddOn.sef"))
             {
                 sw.Write(s);
                 sw.Flush();
@@ -428,7 +450,7 @@ namespace PaF___PvP_Installer
 
         private void CopyFiles()
         {
-            string sPAFPath = txtLB2.Text + @"\Pokemon and Friends";
+            string sPAFPath = txtSAMMI.Text + @"\Pokemon and Friends";
 
             if (!Directory.Exists(sPAFPath + @"\attacks")) Directory.CreateDirectory(sPAFPath + @"\attacks");
             if (!Directory.Exists(sPAFPath + @"\battle_music")) Directory.CreateDirectory(sPAFPath + @"\battle_music");
@@ -510,7 +532,7 @@ namespace PaF___PvP_Installer
 
         private bool CheckValues()
         {
-            if (string.IsNullOrEmpty(txtLB2.Text)) return false;
+            if (string.IsNullOrEmpty(txtSAMMI.Text)) return false;
 
             if (string.IsNullOrEmpty(txtAttackpowerMin.Text)) return false;
             if (string.IsNullOrEmpty(txtAttackpowerMax.Text)) return false;

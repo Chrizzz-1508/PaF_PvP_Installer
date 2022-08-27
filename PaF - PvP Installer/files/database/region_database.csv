@@ -1,0 +1,11 @@
+﻿,name_en,name_en_lowercase,name_de,name_de_lowercase,name_fr,name_fr_lowercase,name_es,name_es_lowercase,name_it,name_it_lowercase,gym_leaders,elite_four,champ,start_id,total_trainers
+1,Kanto,kanto,Kanto,kanto,Kanto,kanto,Kanto,kanto,Kanto,kanto,8,4,1,1,13
+2,Johto,johto,Johto,johto,Johto,johto,Johto,johto,Johto,johto,8,4,1,14,13
+3,Hoenn,hoenn,Hoenn,hoenn,Hoenn,hoenn,Hoenn,hoenn,Hoenn,hoenn,8,4,1,27,13
+4,Sinnoh,sinnoh,Sinnoh,sinnoh,Sinnoh,sinnoh,Sinnoh,sinnoh,Sinnoh,sinnoh,8,4,1,40,13
+5,Unova,unova,Einall,einall,Unys,unys,Unova,unova,Unima,unima,8,4,1,53,13
+6,Kalos,kalos,Kalos,kalos,Kalos,kalos,Kalos,kalos,Kalos,kalos,8,4,1,66,13
+7,Alola,alola,Alola,alola,Alola,alola,Alola,alola,Alola,alola,7,4,1,79,12
+8,Galar,galar,Galar,galar,Galar,galar,Galar,galar,Galar,galar,8,0,1,91,9
+9,Paldea,paldea,Paldea,paldea,Paldea,paldea,Paldea,paldea,Paldea,paldea,0,0,0,1000,0
+10,Custom,custom,Custom,custom,Custom,custom,Custom,custom,Custom,custom,12,0,0,100,12
