@@ -10,13 +10,22 @@ New Installation:
 4) Inside SAMMI install the newly created Extension (PaF_PvP_AddOn.sef)
 5) Wait until everything is installed, might take up to 5min (A message will pop up when it was successful)
 
-Upgrading from V1.0:
-====================
+Upgrading from V1.0.0:
+======================
 
 1) Delete all your existing PvP Channel Point Rewards
 2) Make sure that V1.2.0+ of the PaF Mod is installed
-3) Run the PaF - PvP Installer.exe and fill out your settings and hit install(you can hover the options for more infos)
+3) Run the PaF - PvP Installer.exe and fill out your settings and hit install (you can hover the options for more infos)
 4) Start OBS and SAMMI and make sure both are connected
-5) Inside SAMMI install the newly created Extension (PaF_PvP_AddOn.sef)
+5) Inside SAMMI install the newly created Extension (PaF_PvP_AddOn.sef) and replace the existing extension & deck
 6) If you are asked if you want to recreate the channel points, say yes
 7) If you are asked if you want to recreate the scenes, say no
+
+Upgrading from V1.1.0:
+======================
+
+1) Run the PaF - PvP Installer.exe and fill out your settings and hit install (you can hover the options for more infos)
+2) Start OBS and SAMMI and make sure both are connected
+3) Inside SAMMI install the newly created Extension (PaF_PvP_AddOn.sef) and replace the existing extension & deck
+4) If you are asked if you want to recreate the channel points, say no
+5) If you are asked if you want to recreate the scenes, say no
