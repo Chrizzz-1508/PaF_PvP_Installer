@@ -76,7 +76,7 @@ namespace PaF___PvP_Installer
             txtBonusChamp.Text = Properties.Settings.Default.BonusChamp;
 
             txtSAMMI.Text = Properties.Settings.Default.SAMMILocation;
-
+            cbAbsoluteSpeed.SelectedIndex = Properties.Settings.Default.AbsoluteSpeed;
             #endregion
 
             SetToolTips();
@@ -108,7 +108,7 @@ namespace PaF___PvP_Installer
             Process.Start("Installation Guide.txt");
             if (DialogResult.Yes == MessageBox.Show("Need more help? Feel free to join my discord! Wanna join now?", "Help", MessageBoxButtons.YesNo))
             {
-                Process.Start("https://discord.gg/A3VF9kW");
+                Process.Start("https://discord.gg/dZ9ZVJKSJz");
             }
         }
 
@@ -231,6 +231,7 @@ namespace PaF___PvP_Installer
             Properties.Settings.Default.BonusChamp = txtBonusChamp.Text;
 
             Properties.Settings.Default.SAMMILocation = txtSAMMI.Text;
+            Properties.Settings.Default.AbsoluteSpeed = cbAbsoluteSpeed.SelectedIndex;
 
             Properties.Settings.Default.Save();
         }
@@ -268,6 +269,7 @@ namespace PaF___PvP_Installer
             TTExplanation.SetToolTip(lblRegion, "Channel Point Name for the Gym Battles.\niewers will need to set their team first.\nDefeating all challengers of a region\nwill award a permanent bonus catchrate.");
 
             TTExplanation.SetToolTip(lblBonusChamp, "Amount in percent of the catchrate\nincrease for the current champ.");
+            TTExplanation.SetToolTip(lblBonusChamp, "If you enable this option, the Pokemon\nwith higher Speed will always attack first.\nOtherwise it will only have an increased\nchance to go first.");
         }
 
         private void btnInstall_Click(object sender, EventArgs e)
@@ -360,6 +362,9 @@ namespace PaF___PvP_Installer
             string VAR_FIXED_COORDINATES_VAR = "true";
             if (cbFixedCoordinates.SelectedIndex == 1) VAR_FIXED_COORDINATES_VAR = "false";
 
+            string VAR_ABSOLUTE_SPEED_VAR = "true";
+            if (cbAbsoluteSpeed.SelectedIndex == 1) VAR_ABSOLUTE_SPEED_VAR = "false";
+
             StreamReader sr = new StreamReader(@"files\PaF_PvP_Unconverted");
             string s = sr.ReadToEnd();
 
@@ -407,6 +412,9 @@ namespace PaF___PvP_Installer
             s = s.Replace("VAR_DODGECHANCE_VAR", txtDodgeChance.Text);
             s = s.Replace("VAR_STURDYCHANCE_VAR", txtSturdyChance.Text);
 
+            s = s.Replace("VAR_ABSOLUTE_SPEED_VAR", VAR_ABSOLUTE_SPEED_VAR);
+
+
             if (cbLimitPvPScenes.SelectedIndex == 0)
             {
                s = s.Replace("VAR_ALLOWED_SCENES_VAR", rtbAllowedScenes.Text.Replace("\n",","));
@@ -436,7 +444,7 @@ namespace PaF___PvP_Installer
                 s = s.Replace("VAR_SIZE_MODIFIER_VAR", "1");
             }
 
-            s = s.Replace("\"include_image\": { }", "\"include_image\": { } ,\"transmitter\":true, \"sammi_version\":\"2022.4.0\", \"extension_triggers\":[\"PVP_INSTALL\"], \"required_extension\":[\"PokemonAndFriend Mod\"] }");
+            s = s.Replace("\"include_image\": { }", "\"include_image\": { } ,\"transmitter\":true, \"sammi_version\":\"2022.4.4\", \"extension_triggers\":[\"PVP_INSTALL\"], \"required_extension\":[\"PokemonAndFriend Mod\"] }");
 
 
             using (StreamWriter sw = new StreamWriter(txtSAMMI.Text + @"\Pokemon and Friends\PaF_PvP_AddOn.sef"))

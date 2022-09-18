@@ -126,6 +126,8 @@
             this.btnSetItUpForMe = new System.Windows.Forms.Button();
             this.TTExplanation = new System.Windows.Forms.ToolTip(this.components);
             this.lblLoading = new System.Windows.Forms.Label();
+            this.cbAbsoluteSpeed = new System.Windows.Forms.ComboBox();
+            this.lblAbsoluteSpeed = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -141,7 +143,7 @@
             // 
             this.pbLoading.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
-            this.pbLoading.Location = new System.Drawing.Point(0, -2);
+            this.pbLoading.Location = new System.Drawing.Point(0, 0);
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.Size = new System.Drawing.Size(1216, 609);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -535,6 +537,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cbAbsoluteSpeed);
+            this.groupBox3.Controls.Add(this.lblAbsoluteSpeed);
             this.groupBox3.Controls.Add(this.cbChampShuffle);
             this.groupBox3.Controls.Add(this.lblChampShuffle);
             this.groupBox3.Controls.Add(this.cbAllowLegendarys);
@@ -570,7 +574,7 @@
             this.cbChampShuffle.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbChampShuffle.Location = new System.Drawing.Point(236, 391);
+            this.cbChampShuffle.Location = new System.Drawing.Point(236, 357);
             this.cbChampShuffle.Name = "cbChampShuffle";
             this.cbChampShuffle.Size = new System.Drawing.Size(121, 28);
             this.cbChampShuffle.TabIndex = 10;
@@ -580,7 +584,7 @@
             this.lblChampShuffle.AutoSize = true;
             this.lblChampShuffle.BackColor = System.Drawing.Color.Transparent;
             this.lblChampShuffle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblChampShuffle.Location = new System.Drawing.Point(6, 394);
+            this.lblChampShuffle.Location = new System.Drawing.Point(6, 360);
             this.lblChampShuffle.Name = "lblChampShuffle";
             this.lblChampShuffle.Size = new System.Drawing.Size(217, 20);
             this.lblChampShuffle.TabIndex = 96;
@@ -594,7 +598,7 @@
             this.cbAllowLegendarys.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbAllowLegendarys.Location = new System.Drawing.Point(236, 347);
+            this.cbAllowLegendarys.Location = new System.Drawing.Point(236, 315);
             this.cbAllowLegendarys.Name = "cbAllowLegendarys";
             this.cbAllowLegendarys.Size = new System.Drawing.Size(121, 28);
             this.cbAllowLegendarys.TabIndex = 9;
@@ -603,7 +607,7 @@
             // 
             this.lblAllowLegendarys.AutoSize = true;
             this.lblAllowLegendarys.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAllowLegendarys.Location = new System.Drawing.Point(6, 350);
+            this.lblAllowLegendarys.Location = new System.Drawing.Point(6, 318);
             this.lblAllowLegendarys.Name = "lblAllowLegendarys";
             this.lblAllowLegendarys.Size = new System.Drawing.Size(149, 20);
             this.lblAllowLegendarys.TabIndex = 95;
@@ -617,7 +621,7 @@
             this.cbLowSpecMode.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbLowSpecMode.Location = new System.Drawing.Point(236, 303);
+            this.cbLowSpecMode.Location = new System.Drawing.Point(236, 274);
             this.cbLowSpecMode.Name = "cbLowSpecMode";
             this.cbLowSpecMode.Size = new System.Drawing.Size(121, 28);
             this.cbLowSpecMode.TabIndex = 8;
@@ -627,7 +631,7 @@
             this.lblLowSpecMode.AutoSize = true;
             this.lblLowSpecMode.BackColor = System.Drawing.Color.Transparent;
             this.lblLowSpecMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLowSpecMode.Location = new System.Drawing.Point(6, 306);
+            this.lblLowSpecMode.Location = new System.Drawing.Point(6, 277);
             this.lblLowSpecMode.Name = "lblLowSpecMode";
             this.lblLowSpecMode.Size = new System.Drawing.Size(179, 20);
             this.lblLowSpecMode.TabIndex = 92;
@@ -641,7 +645,7 @@
             this.cbShowAttacks.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbShowAttacks.Location = new System.Drawing.Point(236, 259);
+            this.cbShowAttacks.Location = new System.Drawing.Point(236, 233);
             this.cbShowAttacks.Name = "cbShowAttacks";
             this.cbShowAttacks.Size = new System.Drawing.Size(121, 28);
             this.cbShowAttacks.TabIndex = 7;
@@ -650,7 +654,7 @@
             // 
             this.lblShowAttacks.AutoSize = true;
             this.lblShowAttacks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblShowAttacks.Location = new System.Drawing.Point(6, 262);
+            this.lblShowAttacks.Location = new System.Drawing.Point(6, 237);
             this.lblShowAttacks.Name = "lblShowAttacks";
             this.lblShowAttacks.Size = new System.Drawing.Size(119, 20);
             this.lblShowAttacks.TabIndex = 91;
@@ -664,7 +668,7 @@
             this.cbUsePokemonGifs.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbUsePokemonGifs.Location = new System.Drawing.Point(236, 171);
+            this.cbUsePokemonGifs.Location = new System.Drawing.Point(236, 151);
             this.cbUsePokemonGifs.Name = "cbUsePokemonGifs";
             this.cbUsePokemonGifs.Size = new System.Drawing.Size(121, 28);
             this.cbUsePokemonGifs.TabIndex = 5;
@@ -674,7 +678,7 @@
             this.lblUsePokemonGifs.AutoSize = true;
             this.lblUsePokemonGifs.BackColor = System.Drawing.Color.Transparent;
             this.lblUsePokemonGifs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblUsePokemonGifs.Location = new System.Drawing.Point(6, 174);
+            this.lblUsePokemonGifs.Location = new System.Drawing.Point(6, 154);
             this.lblUsePokemonGifs.Name = "lblUsePokemonGifs";
             this.lblUsePokemonGifs.Size = new System.Drawing.Size(165, 20);
             this.lblUsePokemonGifs.TabIndex = 88;
@@ -688,7 +692,7 @@
             this.cbShowAttackTypes.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbShowAttackTypes.Location = new System.Drawing.Point(236, 215);
+            this.cbShowAttackTypes.Location = new System.Drawing.Point(236, 192);
             this.cbShowAttackTypes.Name = "cbShowAttackTypes";
             this.cbShowAttackTypes.Size = new System.Drawing.Size(121, 28);
             this.cbShowAttackTypes.TabIndex = 6;
@@ -697,7 +701,7 @@
             // 
             this.lblShowAttackTypes.AutoSize = true;
             this.lblShowAttackTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblShowAttackTypes.Location = new System.Drawing.Point(6, 218);
+            this.lblShowAttackTypes.Location = new System.Drawing.Point(6, 195);
             this.lblShowAttackTypes.Name = "lblShowAttackTypes";
             this.lblShowAttackTypes.Size = new System.Drawing.Size(162, 20);
             this.lblShowAttackTypes.TabIndex = 86;
@@ -711,7 +715,7 @@
             this.cbPauseBaseGame.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbPauseBaseGame.Location = new System.Drawing.Point(236, 127);
+            this.cbPauseBaseGame.Location = new System.Drawing.Point(236, 110);
             this.cbPauseBaseGame.Name = "cbPauseBaseGame";
             this.cbPauseBaseGame.Size = new System.Drawing.Size(121, 28);
             this.cbPauseBaseGame.TabIndex = 4;
@@ -720,7 +724,7 @@
             // 
             this.lblPauseBaseGame.AutoSize = true;
             this.lblPauseBaseGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPauseBaseGame.Location = new System.Drawing.Point(6, 130);
+            this.lblPauseBaseGame.Location = new System.Drawing.Point(6, 113);
             this.lblPauseBaseGame.Name = "lblPauseBaseGame";
             this.lblPauseBaseGame.Size = new System.Drawing.Size(158, 20);
             this.lblPauseBaseGame.TabIndex = 84;
@@ -729,7 +733,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.Location = new System.Drawing.Point(324, 41);
+            this.btnSearch.Location = new System.Drawing.Point(324, 30);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(33, 28);
             this.btnSearch.TabIndex = 2;
@@ -741,7 +745,7 @@
             // 
             this.txtSAMMI.Enabled = false;
             this.txtSAMMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSAMMI.Location = new System.Drawing.Point(236, 42);
+            this.txtSAMMI.Location = new System.Drawing.Point(236, 31);
             this.txtSAMMI.Name = "txtSAMMI";
             this.txtSAMMI.Size = new System.Drawing.Size(82, 26);
             this.txtSAMMI.TabIndex = 1;
@@ -750,7 +754,7 @@
             // 
             this.lblSAMMI.AutoSize = true;
             this.lblSAMMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSAMMI.Location = new System.Drawing.Point(6, 45);
+            this.lblSAMMI.Location = new System.Drawing.Point(6, 34);
             this.lblSAMMI.Name = "lblSAMMI";
             this.lblSAMMI.Size = new System.Drawing.Size(141, 20);
             this.lblSAMMI.TabIndex = 6;
@@ -760,7 +764,7 @@
             // 
             this.lblAttackAnimation.AutoSize = true;
             this.lblAttackAnimation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAttackAnimation.Location = new System.Drawing.Point(6, 86);
+            this.lblAttackAnimation.Location = new System.Drawing.Point(6, 72);
             this.lblAttackAnimation.Name = "lblAttackAnimation";
             this.lblAttackAnimation.Size = new System.Drawing.Size(148, 20);
             this.lblAttackAnimation.TabIndex = 22;
@@ -777,7 +781,7 @@
             "Lunge",
             "Circle",
             "None"});
-            this.cbAttackAnimation.Location = new System.Drawing.Point(236, 83);
+            this.cbAttackAnimation.Location = new System.Drawing.Point(236, 69);
             this.cbAttackAnimation.Name = "cbAttackAnimation";
             this.cbAttackAnimation.Size = new System.Drawing.Size(121, 28);
             this.cbAttackAnimation.TabIndex = 3;
@@ -1169,7 +1173,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(139, 25);
             this.lblVersion.TabIndex = 109;
-            this.lblVersion.Text = "Version 1.1.0";
+            this.lblVersion.Text = "Version 1.1.2";
             // 
             // btnEnglishGuide
             // 
@@ -1255,6 +1259,30 @@
             this.lblLoading.TabIndex = 116;
             this.lblLoading.Text = "Installing now, please wait...";
             this.lblLoading.Visible = false;
+            // 
+            // cbAbsoluteSpeed
+            // 
+            this.cbAbsoluteSpeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAbsoluteSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbAbsoluteSpeed.FormattingEnabled = true;
+            this.cbAbsoluteSpeed.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.cbAbsoluteSpeed.Location = new System.Drawing.Point(236, 396);
+            this.cbAbsoluteSpeed.Name = "cbAbsoluteSpeed";
+            this.cbAbsoluteSpeed.Size = new System.Drawing.Size(121, 28);
+            this.cbAbsoluteSpeed.TabIndex = 97;
+            // 
+            // lblAbsoluteSpeed
+            // 
+            this.lblAbsoluteSpeed.AutoSize = true;
+            this.lblAbsoluteSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.lblAbsoluteSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblAbsoluteSpeed.Location = new System.Drawing.Point(6, 399);
+            this.lblAbsoluteSpeed.Name = "lblAbsoluteSpeed";
+            this.lblAbsoluteSpeed.Size = new System.Drawing.Size(137, 20);
+            this.lblAbsoluteSpeed.TabIndex = 98;
+            this.lblAbsoluteSpeed.Text = "Absolute Speed";
             // 
             // frmMain
             // 
@@ -1395,6 +1423,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtBonusChamp;
         private System.Windows.Forms.Label lblBonusChamp;
+        private System.Windows.Forms.ComboBox cbAbsoluteSpeed;
+        private System.Windows.Forms.Label lblAbsoluteSpeed;
     }
 }
 

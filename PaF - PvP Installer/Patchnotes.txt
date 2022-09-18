@@ -1,4 +1,10 @@
-﻿06.09.22 Update V1.1.1
+﻿18.09.22 Update V1.1.2
+======================
+- Added full OBSWS4.9.1 & OBSWS5.0 support
+- Added checks to see if values were loaded correctly
+- Added a new "Absolute speed" option (if active, the faster Pokemon will always attack first, otherwise it only has an increased chance to strike first)
+
+06.09.22 Update V1.1.1
 ======================
 - Fixed some bugs where the game could get stuck / crash when you got disconnected from OBS / Twitch
 - Allows users to change their team during ongoing fights (won't affect the current fight)
