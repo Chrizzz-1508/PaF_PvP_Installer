@@ -38,7 +38,7 @@
             this.lblRegion = new System.Windows.Forms.Label();
             this.cbChamp = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPriceRandom6v6 = new System.Windows.Forms.TextBox();
             this.txtPriceRandom3v3 = new System.Windows.Forms.TextBox();
@@ -65,6 +65,8 @@
             this.txtBonusChamp = new System.Windows.Forms.TextBox();
             this.lblBonusChamp = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbAbsoluteSpeed = new System.Windows.Forms.ComboBox();
+            this.lblAbsoluteSpeed = new System.Windows.Forms.Label();
             this.cbChampShuffle = new System.Windows.Forms.ComboBox();
             this.lblChampShuffle = new System.Windows.Forms.Label();
             this.cbAllowLegendarys = new System.Windows.Forms.ComboBox();
@@ -122,12 +124,10 @@
             this.btnSupport = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnInstall = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCopyright = new System.Windows.Forms.Label();
             this.btnSetItUpForMe = new System.Windows.Forms.Button();
             this.TTExplanation = new System.Windows.Forms.ToolTip(this.components);
             this.lblLoading = new System.Windows.Forms.Label();
-            this.cbAbsoluteSpeed = new System.Windows.Forms.ComboBox();
-            this.lblAbsoluteSpeed = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -160,7 +160,7 @@
             this.tabPage2.Controls.Add(this.lblRegion);
             this.tabPage2.Controls.Add(this.cbChamp);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.lblPrice);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.txtPriceRandom6v6);
             this.tabPage2.Controls.Add(this.txtPriceRandom3v3);
@@ -254,15 +254,15 @@
             this.label5.TabIndex = 106;
             this.label5.Text = "Use Reward";
             // 
-            // label4
+            // lblPrice
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(770, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 31);
-            this.label4.TabIndex = 105;
-            this.label4.Text = "Price";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(770, 20);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(81, 31);
+            this.lblPrice.TabIndex = 105;
+            this.lblPrice.Text = "Price";
             // 
             // label3
             // 
@@ -565,6 +565,30 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "General Settings";
+            // 
+            // cbAbsoluteSpeed
+            // 
+            this.cbAbsoluteSpeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAbsoluteSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cbAbsoluteSpeed.FormattingEnabled = true;
+            this.cbAbsoluteSpeed.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.cbAbsoluteSpeed.Location = new System.Drawing.Point(236, 396);
+            this.cbAbsoluteSpeed.Name = "cbAbsoluteSpeed";
+            this.cbAbsoluteSpeed.Size = new System.Drawing.Size(121, 28);
+            this.cbAbsoluteSpeed.TabIndex = 97;
+            // 
+            // lblAbsoluteSpeed
+            // 
+            this.lblAbsoluteSpeed.AutoSize = true;
+            this.lblAbsoluteSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.lblAbsoluteSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblAbsoluteSpeed.Location = new System.Drawing.Point(6, 399);
+            this.lblAbsoluteSpeed.Name = "lblAbsoluteSpeed";
+            this.lblAbsoluteSpeed.Size = new System.Drawing.Size(137, 20);
+            this.lblAbsoluteSpeed.TabIndex = 98;
+            this.lblAbsoluteSpeed.Text = "Absolute Speed";
             // 
             // cbChampShuffle
             // 
@@ -1173,7 +1197,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(139, 25);
             this.lblVersion.TabIndex = 109;
-            this.lblVersion.Text = "Version 1.1.2";
+            this.lblVersion.Text = "Version 1.1.3";
             // 
             // btnEnglishGuide
             // 
@@ -1219,15 +1243,15 @@
             this.btnInstall.UseVisualStyleBackColor = true;
             this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
             // 
-            // label1
+            // lblCopyright
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 565);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 25);
-            this.label1.TabIndex = 114;
-            this.label1.Text = "© by chrizzz_1508";
+            this.lblCopyright.AutoSize = true;
+            this.lblCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCopyright.Location = new System.Drawing.Point(23, 565);
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(190, 25);
+            this.lblCopyright.TabIndex = 114;
+            this.lblCopyright.Text = "© by chrizzz_1508";
             // 
             // btnSetItUpForMe
             // 
@@ -1260,30 +1284,6 @@
             this.lblLoading.Text = "Installing now, please wait...";
             this.lblLoading.Visible = false;
             // 
-            // cbAbsoluteSpeed
-            // 
-            this.cbAbsoluteSpeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAbsoluteSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cbAbsoluteSpeed.FormattingEnabled = true;
-            this.cbAbsoluteSpeed.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.cbAbsoluteSpeed.Location = new System.Drawing.Point(236, 396);
-            this.cbAbsoluteSpeed.Name = "cbAbsoluteSpeed";
-            this.cbAbsoluteSpeed.Size = new System.Drawing.Size(121, 28);
-            this.cbAbsoluteSpeed.TabIndex = 97;
-            // 
-            // lblAbsoluteSpeed
-            // 
-            this.lblAbsoluteSpeed.AutoSize = true;
-            this.lblAbsoluteSpeed.BackColor = System.Drawing.Color.Transparent;
-            this.lblAbsoluteSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAbsoluteSpeed.Location = new System.Drawing.Point(6, 399);
-            this.lblAbsoluteSpeed.Name = "lblAbsoluteSpeed";
-            this.lblAbsoluteSpeed.Size = new System.Drawing.Size(137, 20);
-            this.lblAbsoluteSpeed.TabIndex = 98;
-            this.lblAbsoluteSpeed.Text = "Absolute Speed";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1292,7 +1292,7 @@
             this.Controls.Add(this.pbLoading);
             this.Controls.Add(this.lblLoading);
             this.Controls.Add(this.btnSetItUpForMe);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.btnSupport);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnInstall);
@@ -1331,7 +1331,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ComboBox cbChamp;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPriceRandom6v6;
         private System.Windows.Forms.TextBox txtPriceRandom3v3;
@@ -1411,7 +1411,7 @@
         private System.Windows.Forms.Button btnSupport;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnInstall;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCopyright;
         private System.Windows.Forms.Button btnSetItUpForMe;
         private System.Windows.Forms.TextBox txtPokemonSizeModifier;
         private System.Windows.Forms.ToolTip TTExplanation;

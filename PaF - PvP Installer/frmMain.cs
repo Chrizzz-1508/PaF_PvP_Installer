@@ -266,10 +266,10 @@ namespace PaF___PvP_Installer
             TTExplanation.SetToolTip(lblNormal6vs6, "Channel Point Name for the 6vs6 Battle with their own Pokemon.\nViewers will need to set their team first.");
             TTExplanation.SetToolTip(lblRandom3v3, "Channel Point Name for the 3vs3 Battle with Random Pokemon.\nViewers will get random Pokemons which they don't need\nto have caught and fight with them.");
             TTExplanation.SetToolTip(lblRandom6v6,"Channel Point Name for the 6vs6 Battle with Random Pokemon.\nViewers will get random Pokemons which they don't need\nto have caught and fight with them.");
-            TTExplanation.SetToolTip(lblRegion, "Channel Point Name for the Gym Battles.\niewers will need to set their team first.\nDefeating all challengers of a region\nwill award a permanent bonus catchrate.");
+            TTExplanation.SetToolTip(lblRegion, "Channel Point Name for the Gym Battles.\nViewers will need to set their team first.\nDefeating all challengers of a region\nwill award a permanent bonus catchrate.");
 
             TTExplanation.SetToolTip(lblBonusChamp, "Amount in percent of the catchrate\nincrease for the current champ.");
-            TTExplanation.SetToolTip(lblBonusChamp, "If you enable this option, the Pokemon\nwith higher Speed will always attack first.\nOtherwise it will only have an increased\nchance to go first.");
+            TTExplanation.SetToolTip(lblAbsoluteSpeed, "If you enable this option, the Pokemon\nwith higher Speed will always attack first.\nOtherwise it will only have an increased\nchance to go first.");
         }
 
         private void btnInstall_Click(object sender, EventArgs e)
