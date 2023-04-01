@@ -459,11 +459,11 @@ namespace PaF___PvP_Installer
         private void CopyFiles()
         {
             string sPAFPath = txtSAMMI.Text + @"\Pokemon and Friends";
-
             if (!Directory.Exists(sPAFPath + @"\attacks")) Directory.CreateDirectory(sPAFPath + @"\attacks");
             if (!Directory.Exists(sPAFPath + @"\battle_music")) Directory.CreateDirectory(sPAFPath + @"\battle_music");
             if (!Directory.Exists(sPAFPath + @"\cries")) Directory.CreateDirectory(sPAFPath + @"\cries");
             if (!Directory.Exists(sPAFPath + @"\hpbar")) Directory.CreateDirectory(sPAFPath + @"\hpbar");
+            if (!Directory.Exists(sPAFPath + @"\trainers")) Directory.CreateDirectory(sPAFPath + @"\trainers");
 
             //Copy Attacks
             DirectoryInfo diAttacks = new DirectoryInfo(@"files\attacks");
@@ -475,8 +475,8 @@ namespace PaF___PvP_Installer
                     if (!File.Exists(fptarget)) File.Copy(f.FullName, fptarget);
                 }
                 catch (Exception ex) { MessageBox.Show(ex.ToString()); }
-            }           
-            
+            }
+
             //Copy Battle Music
             DirectoryInfo diBattle_Music = new DirectoryInfo(@"files\battle_music");
             foreach (FileInfo f in diBattle_Music.GetFiles())
@@ -489,6 +489,13 @@ namespace PaF___PvP_Installer
                 catch (Exception ex) { MessageBox.Show(ex.ToString()); }
             }
 
+            //Create Array:
+            List<string> lsGen9 = new List<string>();
+            for (int i = 906; i <= 1008; i++)
+            {
+                lsGen9.Add(i.ToString() + ".wav");
+            }
+
             //Copy Cries
             DirectoryInfo diCries = new DirectoryInfo(@"files\cries");
             foreach (FileInfo f in diCries.GetFiles())
@@ -497,6 +504,13 @@ namespace PaF___PvP_Installer
                 {
                     string fptarget = sPAFPath + @"\cries\" + f.Name;
                     if (!File.Exists(fptarget)) File.Copy(f.FullName, fptarget);
+                    else
+                    {
+                        for (int i = 0; i < lsGen9.Count; i++)
+                        {
+                            if (f.FullName.Contains(lsGen9[i])) File.Copy(f.FullName, fptarget, true);
+                        }
+                    }
                 }
                 catch (Exception ex) { MessageBox.Show(ex.ToString()); }
             }
@@ -505,12 +519,57 @@ namespace PaF___PvP_Installer
             DirectoryInfo diDatabase = new DirectoryInfo(@"files\database");
             foreach (FileInfo f in diDatabase.GetFiles())
             {
-                try
+                if (f.Name == "gym_database.csv")
                 {
                     string fptarget = sPAFPath + @"\database\" + f.Name;
-                    if (!File.Exists(fptarget)) File.Copy(f.FullName, fptarget);
+                    if (File.Exists(fptarget))
+                    {
+                        try
+                        {
+                            string sChamp = "";
+                            using (StreamReader sr = new StreamReader(fptarget))
+                            {
+                                sr.ReadLine();
+                                sChamp = sr.ReadLine();
+                                sr.Close();
+                            }
+                            File.Copy(f.FullName, fptarget, true);
+
+                            string sCSV = "";
+                            using (StreamReader sr = new StreamReader(fptarget))
+                            {
+                                sCSV = sr.ReadToEnd().Replace("0,0,0,chrizzz_1508,chrizzz_1508,chrizzz_1508,chrizzz_1508,chrizzz_1508,3,6,9,149,150,130,30,4", sChamp);
+                                sr.Close();
+                            }
+                            using (StreamWriter sw = new StreamWriter(fptarget, false))
+                            {
+                                sw.Write(sCSV);
+                                sw.Close();
+                            }
+                        }
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            File.Copy(f.FullName, fptarget, true);
+                        }
+                        catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+                    }
                 }
-                catch(Exception ex) { MessageBox.Show(ex.ToString()); }
+                else
+                {
+                    try
+                    {
+                        string fptarget = sPAFPath + @"\database\" + f.Name;
+                        File.Copy(f.FullName, fptarget, true);
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+                }
             }
 
             //Copy HP
@@ -523,6 +582,18 @@ namespace PaF___PvP_Installer
                     if (!File.Exists(fptarget)) File.Copy(f.FullName, fptarget);
                 }
                 catch(Exception e) { MessageBox.Show(e.ToString()); }
+            }
+
+            //Copy Trainers
+            DirectoryInfo diTrainers = new DirectoryInfo(@"files\trainers");
+            foreach (FileInfo f in diTrainers.GetFiles())
+            {
+                try
+                {
+                    string fptarget = sPAFPath + @"\trainers\" + f.Name;
+                    File.Copy(f.FullName, fptarget, true);
+                }
+                catch (Exception ex) { MessageBox.Show(ex.ToString()); }
             }
 
             //Copy Sources

@@ -1197,7 +1197,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(139, 25);
             this.lblVersion.TabIndex = 109;
-            this.lblVersion.Text = "Version 1.1.3";
+            this.lblVersion.Text = "Version 1.1.6";
             // 
             // btnEnglishGuide
             // 
@@ -1288,7 +1288,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 606);
+            this.ClientSize = new System.Drawing.Size(1208, 609);
             this.Controls.Add(this.pbLoading);
             this.Controls.Add(this.lblLoading);
             this.Controls.Add(this.btnSetItUpForMe);

@@ -21,7 +21,7 @@ Upgrading from V1.0.0:
 6) If you are asked if you want to recreate the channel points, say yes
 7) If you are asked if you want to recreate the scenes, say no
 
-Upgrading from V1.1.0:
+Upgrading from V1.1.X:
 ======================
 
 1) Run the PaF - PvP Installer.exe and fill out your settings and hit install (you can hover the options for more infos)

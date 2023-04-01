@@ -1,4 +1,23 @@
-﻿23.09.22 Update V1.1.3
+﻿01.04.23 Update V1.1.6
+======================
+- Added a bugfix where people that started with 0 couldn't fight
+- Added portuguese translations (translated by RizakH)
+
+01.02.23 Update V1.1.5
+======================
+- Fixed Non Affiliate Mode
+- Fixed a bug with the !mygyms command
+- Added new !pvpregion command to do gym battles in Non Affiliate Mode
+- Added 4 new SAMMI commands, you can now easily create your own fights with a single command (check out the example button)
+- Added a new challenger to the custom region (Pebpebs)
+
+25.01.23 Update V1.1.4
+======================
+- Added Gen 9 (Paldea) gym battles
+- Added a new command "!mygyms" which posts an overview of your current gym progress to discord
+- Added the Pokemon cries for Gen 9
+
+23.09.22 Update V1.1.3
 ======================
 - Fixed the tooltips in the installer
 - Fixed a WS5 bug where the scene switch wasn't recognized
