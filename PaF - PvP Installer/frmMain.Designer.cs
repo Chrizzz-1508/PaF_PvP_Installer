@@ -128,6 +128,8 @@
             this.btnSetItUpForMe = new System.Windows.Forms.Button();
             this.TTExplanation = new System.Windows.Forms.ToolTip(this.components);
             this.lblLoading = new System.Windows.Forms.Label();
+            this.txtLegendaryCount = new System.Windows.Forms.TextBox();
+            this.lblLegendaryCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -143,9 +145,9 @@
             // 
             this.pbLoading.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
-            this.pbLoading.Location = new System.Drawing.Point(0, 0);
+            this.pbLoading.Location = new System.Drawing.Point(2000, 0);
             this.pbLoading.Name = "pbLoading";
-            this.pbLoading.Size = new System.Drawing.Size(1216, 609);
+            this.pbLoading.Size = new System.Drawing.Size(1214, 659);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbLoading.TabIndex = 106;
             this.pbLoading.TabStop = false;
@@ -484,7 +486,7 @@
             this.tabControl1.Location = new System.Drawing.Point(1, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1204, 505);
+            this.tabControl1.Size = new System.Drawing.Size(1204, 552);
             this.tabControl1.TabIndex = 107;
             // 
             // tabPage1
@@ -498,7 +500,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 46);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1196, 455);
+            this.tabPage1.Size = new System.Drawing.Size(1196, 502);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Game Settings";
             // 
@@ -507,9 +509,9 @@
             this.groupBox1.Controls.Add(this.txtBonusChamp);
             this.groupBox1.Controls.Add(this.lblBonusChamp);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(812, 378);
+            this.groupBox1.Location = new System.Drawing.Point(812, 405);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 71);
+            this.groupBox1.Size = new System.Drawing.Size(375, 87);
             this.groupBox1.TabIndex = 72;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Other Settings";
@@ -517,7 +519,7 @@
             // txtBonusChamp
             // 
             this.txtBonusChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtBonusChamp.Location = new System.Drawing.Point(217, 30);
+            this.txtBonusChamp.Location = new System.Drawing.Point(217, 42);
             this.txtBonusChamp.MaxLength = 5;
             this.txtBonusChamp.Name = "txtBonusChamp";
             this.txtBonusChamp.Size = new System.Drawing.Size(121, 26);
@@ -529,7 +531,7 @@
             // 
             this.lblBonusChamp.AutoSize = true;
             this.lblBonusChamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblBonusChamp.Location = new System.Drawing.Point(9, 33);
+            this.lblBonusChamp.Location = new System.Drawing.Point(9, 45);
             this.lblBonusChamp.Name = "lblBonusChamp";
             this.lblBonusChamp.Size = new System.Drawing.Size(198, 20);
             this.lblBonusChamp.TabIndex = 69;
@@ -537,6 +539,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtLegendaryCount);
+            this.groupBox3.Controls.Add(this.lblLegendaryCount);
             this.groupBox3.Controls.Add(this.cbAbsoluteSpeed);
             this.groupBox3.Controls.Add(this.lblAbsoluteSpeed);
             this.groupBox3.Controls.Add(this.cbChampShuffle);
@@ -561,7 +565,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(13, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(363, 433);
+            this.groupBox3.Size = new System.Drawing.Size(373, 476);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "General Settings";
@@ -577,7 +581,7 @@
             this.cbAbsoluteSpeed.Location = new System.Drawing.Point(236, 396);
             this.cbAbsoluteSpeed.Name = "cbAbsoluteSpeed";
             this.cbAbsoluteSpeed.Size = new System.Drawing.Size(121, 28);
-            this.cbAbsoluteSpeed.TabIndex = 97;
+            this.cbAbsoluteSpeed.TabIndex = 11;
             // 
             // lblAbsoluteSpeed
             // 
@@ -598,17 +602,17 @@
             this.cbChampShuffle.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cbChampShuffle.Location = new System.Drawing.Point(236, 357);
+            this.cbChampShuffle.Location = new System.Drawing.Point(236, 434);
             this.cbChampShuffle.Name = "cbChampShuffle";
             this.cbChampShuffle.Size = new System.Drawing.Size(121, 28);
-            this.cbChampShuffle.TabIndex = 10;
+            this.cbChampShuffle.TabIndex = 12;
             // 
             // lblChampShuffle
             // 
             this.lblChampShuffle.AutoSize = true;
             this.lblChampShuffle.BackColor = System.Drawing.Color.Transparent;
             this.lblChampShuffle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblChampShuffle.Location = new System.Drawing.Point(6, 360);
+            this.lblChampShuffle.Location = new System.Drawing.Point(6, 437);
             this.lblChampShuffle.Name = "lblChampShuffle";
             this.lblChampShuffle.Size = new System.Drawing.Size(217, 20);
             this.lblChampShuffle.TabIndex = 96;
@@ -626,6 +630,7 @@
             this.cbAllowLegendarys.Name = "cbAllowLegendarys";
             this.cbAllowLegendarys.Size = new System.Drawing.Size(121, 28);
             this.cbAllowLegendarys.TabIndex = 9;
+            this.cbAllowLegendarys.SelectedIndexChanged += new System.EventHandler(this.cbAllowLegendarys_SelectedIndexChanged);
             // 
             // lblAllowLegendarys
             // 
@@ -828,7 +833,7 @@
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.Location = new System.Drawing.Point(402, 17);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(404, 432);
+            this.groupBox11.Size = new System.Drawing.Size(404, 475);
             this.groupBox11.TabIndex = 3;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Scene / Graphic Settings";
@@ -836,9 +841,9 @@
             // rtbAllowedScenes
             // 
             this.rtbAllowedScenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.rtbAllowedScenes.Location = new System.Drawing.Point(19, 302);
+            this.rtbAllowedScenes.Location = new System.Drawing.Point(19, 314);
             this.rtbAllowedScenes.Name = "rtbAllowedScenes";
-            this.rtbAllowedScenes.Size = new System.Drawing.Size(358, 121);
+            this.rtbAllowedScenes.Size = new System.Drawing.Size(358, 147);
             this.rtbAllowedScenes.TabIndex = 49;
             this.rtbAllowedScenes.Text = "";
             // 
@@ -894,7 +899,7 @@
             // 
             this.lblAllowedScenes.AutoSize = true;
             this.lblAllowedScenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblAllowedScenes.Location = new System.Drawing.Point(15, 266);
+            this.lblAllowedScenes.Location = new System.Drawing.Point(14, 277);
             this.lblAllowedScenes.Name = "lblAllowedScenes";
             this.lblAllowedScenes.Size = new System.Drawing.Size(290, 20);
             this.lblAllowedScenes.TabIndex = 43;
@@ -1131,7 +1136,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(812, 270);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(375, 104);
+            this.groupBox7.Size = new System.Drawing.Size(375, 118);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Timer Settings";
@@ -1139,7 +1144,7 @@
             // txtCooldownTimer
             // 
             this.txtCooldownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtCooldownTimer.Location = new System.Drawing.Point(217, 66);
+            this.txtCooldownTimer.Location = new System.Drawing.Point(217, 75);
             this.txtCooldownTimer.MaxLength = 5;
             this.txtCooldownTimer.Name = "txtCooldownTimer";
             this.txtCooldownTimer.Size = new System.Drawing.Size(121, 26);
@@ -1151,7 +1156,7 @@
             // 
             this.lblCooldownTimer.AutoSize = true;
             this.lblCooldownTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCooldownTimer.Location = new System.Drawing.Point(9, 69);
+            this.lblCooldownTimer.Location = new System.Drawing.Point(9, 78);
             this.lblCooldownTimer.Name = "lblCooldownTimer";
             this.lblCooldownTimer.Size = new System.Drawing.Size(162, 20);
             this.lblCooldownTimer.TabIndex = 71;
@@ -1160,7 +1165,7 @@
             // txtChallengeTimer
             // 
             this.txtChallengeTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtChallengeTimer.Location = new System.Drawing.Point(217, 30);
+            this.txtChallengeTimer.Location = new System.Drawing.Point(217, 39);
             this.txtChallengeTimer.MaxLength = 5;
             this.txtChallengeTimer.Name = "txtChallengeTimer";
             this.txtChallengeTimer.Size = new System.Drawing.Size(121, 26);
@@ -1172,7 +1177,7 @@
             // 
             this.lblChallengeTimer.AutoSize = true;
             this.lblChallengeTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblChallengeTimer.Location = new System.Drawing.Point(9, 33);
+            this.lblChallengeTimer.Location = new System.Drawing.Point(9, 42);
             this.lblChallengeTimer.Name = "lblChallengeTimer";
             this.lblChallengeTimer.Size = new System.Drawing.Size(164, 20);
             this.lblChallengeTimer.TabIndex = 69;
@@ -1181,7 +1186,7 @@
             // btnGermanGuide
             // 
             this.btnGermanGuide.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnGermanGuide.Location = new System.Drawing.Point(248, 517);
+            this.btnGermanGuide.Location = new System.Drawing.Point(248, 564);
             this.btnGermanGuide.Name = "btnGermanGuide";
             this.btnGermanGuide.Size = new System.Drawing.Size(143, 81);
             this.btnGermanGuide.TabIndex = 108;
@@ -1193,16 +1198,16 @@
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.Location = new System.Drawing.Point(48, 531);
+            this.lblVersion.Location = new System.Drawing.Point(43, 576);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(139, 25);
             this.lblVersion.TabIndex = 109;
-            this.lblVersion.Text = "Version 1.1.6";
+            this.lblVersion.Text = "Version 1.1.7";
             // 
             // btnEnglishGuide
             // 
             this.btnEnglishGuide.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEnglishGuide.Location = new System.Drawing.Point(399, 517);
+            this.btnEnglishGuide.Location = new System.Drawing.Point(397, 564);
             this.btnEnglishGuide.Name = "btnEnglishGuide";
             this.btnEnglishGuide.Size = new System.Drawing.Size(143, 81);
             this.btnEnglishGuide.TabIndex = 110;
@@ -1213,7 +1218,7 @@
             // btnSupport
             // 
             this.btnSupport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupport.Location = new System.Drawing.Point(759, 517);
+            this.btnSupport.Location = new System.Drawing.Point(757, 564);
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.Size = new System.Drawing.Size(142, 81);
             this.btnSupport.TabIndex = 111;
@@ -1224,7 +1229,7 @@
             // btnHelp
             // 
             this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnHelp.Location = new System.Drawing.Point(909, 517);
+            this.btnHelp.Location = new System.Drawing.Point(907, 564);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(143, 81);
             this.btnHelp.TabIndex = 112;
@@ -1235,7 +1240,7 @@
             // btnInstall
             // 
             this.btnInstall.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnInstall.Location = new System.Drawing.Point(1060, 517);
+            this.btnInstall.Location = new System.Drawing.Point(1058, 564);
             this.btnInstall.Name = "btnInstall";
             this.btnInstall.Size = new System.Drawing.Size(143, 81);
             this.btnInstall.TabIndex = 113;
@@ -1247,7 +1252,7 @@
             // 
             this.lblCopyright.AutoSize = true;
             this.lblCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyright.Location = new System.Drawing.Point(23, 565);
+            this.lblCopyright.Location = new System.Drawing.Point(18, 610);
             this.lblCopyright.Name = "lblCopyright";
             this.lblCopyright.Size = new System.Drawing.Size(190, 25);
             this.lblCopyright.TabIndex = 114;
@@ -1256,7 +1261,7 @@
             // btnSetItUpForMe
             // 
             this.btnSetItUpForMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSetItUpForMe.Location = new System.Drawing.Point(550, 517);
+            this.btnSetItUpForMe.Location = new System.Drawing.Point(584, 564);
             this.btnSetItUpForMe.Name = "btnSetItUpForMe";
             this.btnSetItUpForMe.Size = new System.Drawing.Size(143, 81);
             this.btnSetItUpForMe.TabIndex = 115;
@@ -1284,11 +1289,33 @@
             this.lblLoading.Text = "Installing now, please wait...";
             this.lblLoading.Visible = false;
             // 
+            // txtLegendaryCount
+            // 
+            this.txtLegendaryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtLegendaryCount.Location = new System.Drawing.Point(236, 357);
+            this.txtLegendaryCount.MaxLength = 1;
+            this.txtLegendaryCount.Name = "txtLegendaryCount";
+            this.txtLegendaryCount.Size = new System.Drawing.Size(121, 26);
+            this.txtLegendaryCount.TabIndex = 10;
+            this.txtLegendaryCount.Text = "1";
+            this.txtLegendaryCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLegendaryCount.TextChanged += new System.EventHandler(this.txtLegendaryCount_TextChanged);
+            // 
+            // lblLegendaryCount
+            // 
+            this.lblLegendaryCount.AutoSize = true;
+            this.lblLegendaryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLegendaryCount.Location = new System.Drawing.Point(4, 360);
+            this.lblLegendaryCount.Name = "lblLegendaryCount";
+            this.lblLegendaryCount.Size = new System.Drawing.Size(219, 20);
+            this.lblLegendaryCount.TabIndex = 99;
+            this.lblLegendaryCount.Text = "Max Legendarys per Team";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 609);
+            this.ClientSize = new System.Drawing.Size(1209, 654);
             this.Controls.Add(this.pbLoading);
             this.Controls.Add(this.lblLoading);
             this.Controls.Add(this.btnSetItUpForMe);
@@ -1425,6 +1452,8 @@
         private System.Windows.Forms.Label lblBonusChamp;
         private System.Windows.Forms.ComboBox cbAbsoluteSpeed;
         private System.Windows.Forms.Label lblAbsoluteSpeed;
+        private System.Windows.Forms.TextBox txtLegendaryCount;
+        private System.Windows.Forms.Label lblLegendaryCount;
     }
 }
 

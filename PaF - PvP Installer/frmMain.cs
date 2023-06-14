@@ -77,6 +77,8 @@ namespace PaF___PvP_Installer
 
             txtSAMMI.Text = Properties.Settings.Default.SAMMILocation;
             cbAbsoluteSpeed.SelectedIndex = Properties.Settings.Default.AbsoluteSpeed;
+
+            txtLegendaryCount.Text = Properties.Settings.Default.LegendaryCount;
             #endregion
 
             SetToolTips();
@@ -233,6 +235,8 @@ namespace PaF___PvP_Installer
             Properties.Settings.Default.SAMMILocation = txtSAMMI.Text;
             Properties.Settings.Default.AbsoluteSpeed = cbAbsoluteSpeed.SelectedIndex;
 
+            Properties.Settings.Default.LegendaryCount = txtLegendaryCount.Text;
+
             Properties.Settings.Default.Save();
         }
 
@@ -246,6 +250,7 @@ namespace PaF___PvP_Installer
             TTExplanation.SetToolTip(lblShowAttacks, "Show Attack moves on the enemy\n(they play a video animation + attack sound)");
             TTExplanation.SetToolTip(lblLowSpecMode, "Enable this only when your PC is really bad");
             TTExplanation.SetToolTip(lblAllowLegendarys, "Allow legendary / mythical Pokemons to be used in the normal teams.");
+            TTExplanation.SetToolTip(lblLegendaryCount, "Max amount of legendarys, mythicals and mega Pokemon that a player can use in a team.");
             TTExplanation.SetToolTip(lblChampShuffle, "Shuffle the order of the Pokemons from the Champ each time he get's challenged.\nEnable this to make it harder for Challengers to counterpick the champ.");
             TTExplanation.SetToolTip(lblDoSwitch, "Automatically switch to a specific scene when a fight is redeemed.");
             TTExplanation.SetToolTip(lblSwitchName,"Enter the name of the scene where you want to switch.\nPlease make sure to spell the name correct.");
@@ -414,6 +419,7 @@ namespace PaF___PvP_Installer
 
             s = s.Replace("VAR_ABSOLUTE_SPEED_VAR", VAR_ABSOLUTE_SPEED_VAR);
 
+            s = s.Replace("VAR_LEGENDARY_COUNT_VAR", txtLegendaryCount.Text);
 
             if (cbLimitPvPScenes.SelectedIndex == 0)
             {
@@ -650,6 +656,35 @@ namespace PaF___PvP_Installer
             {
                 lblSwitchName.Visible = false;
                 txtSwitchName.Visible = false;
+            }
+        }
+
+        private void txtLegendaryCount_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLegendaryCount.Text != "0" &&
+                txtLegendaryCount.Text != "1" &&
+                txtLegendaryCount.Text != "2" &&
+                txtLegendaryCount.Text != "3" &&
+                txtLegendaryCount.Text != "4" &&
+                txtLegendaryCount.Text != "5" &&
+                txtLegendaryCount.Text != "6")
+            {
+                txtLegendaryCount.Text = "1";
+            }
+        }
+
+        private void cbAllowLegendarys_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbAllowLegendarys.SelectedIndex == 0)
+            {
+                lblLegendaryCount.Visible = true;
+                txtLegendaryCount.Visible = true;
+            }
+            else
+            {
+                lblLegendaryCount.Visible = false;
+                txtLegendaryCount.Visible = false;
+                txtLegendaryCount.Text = "1";
             }
         }
     }
