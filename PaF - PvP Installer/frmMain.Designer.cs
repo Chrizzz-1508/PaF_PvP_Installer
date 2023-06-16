@@ -65,6 +65,8 @@
             this.txtBonusChamp = new System.Windows.Forms.TextBox();
             this.lblBonusChamp = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtLegendaryCount = new System.Windows.Forms.TextBox();
+            this.lblLegendaryCount = new System.Windows.Forms.Label();
             this.cbAbsoluteSpeed = new System.Windows.Forms.ComboBox();
             this.lblAbsoluteSpeed = new System.Windows.Forms.Label();
             this.cbChampShuffle = new System.Windows.Forms.ComboBox();
@@ -128,8 +130,6 @@
             this.btnSetItUpForMe = new System.Windows.Forms.Button();
             this.TTExplanation = new System.Windows.Forms.ToolTip(this.components);
             this.lblLoading = new System.Windows.Forms.Label();
-            this.txtLegendaryCount = new System.Windows.Forms.TextBox();
-            this.lblLegendaryCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -145,7 +145,7 @@
             // 
             this.pbLoading.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pbLoading.Image = ((System.Drawing.Image)(resources.GetObject("pbLoading.Image")));
-            this.pbLoading.Location = new System.Drawing.Point(2000, 0);
+            this.pbLoading.Location = new System.Drawing.Point(0, 0);
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.Size = new System.Drawing.Size(1214, 659);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -186,7 +186,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 46);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1196, 455);
+            this.tabPage2.Size = new System.Drawing.Size(1196, 502);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Channel Point Settings";
             // 
@@ -569,6 +569,28 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "General Settings";
+            // 
+            // txtLegendaryCount
+            // 
+            this.txtLegendaryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtLegendaryCount.Location = new System.Drawing.Point(236, 357);
+            this.txtLegendaryCount.MaxLength = 1;
+            this.txtLegendaryCount.Name = "txtLegendaryCount";
+            this.txtLegendaryCount.Size = new System.Drawing.Size(121, 26);
+            this.txtLegendaryCount.TabIndex = 10;
+            this.txtLegendaryCount.Text = "1";
+            this.txtLegendaryCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLegendaryCount.TextChanged += new System.EventHandler(this.txtLegendaryCount_TextChanged);
+            // 
+            // lblLegendaryCount
+            // 
+            this.lblLegendaryCount.AutoSize = true;
+            this.lblLegendaryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLegendaryCount.Location = new System.Drawing.Point(4, 360);
+            this.lblLegendaryCount.Name = "lblLegendaryCount";
+            this.lblLegendaryCount.Size = new System.Drawing.Size(219, 20);
+            this.lblLegendaryCount.TabIndex = 99;
+            this.lblLegendaryCount.Text = "Max Legendarys per Team";
             // 
             // cbAbsoluteSpeed
             // 
@@ -1288,28 +1310,6 @@
             this.lblLoading.TabIndex = 116;
             this.lblLoading.Text = "Installing now, please wait...";
             this.lblLoading.Visible = false;
-            // 
-            // txtLegendaryCount
-            // 
-            this.txtLegendaryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtLegendaryCount.Location = new System.Drawing.Point(236, 357);
-            this.txtLegendaryCount.MaxLength = 1;
-            this.txtLegendaryCount.Name = "txtLegendaryCount";
-            this.txtLegendaryCount.Size = new System.Drawing.Size(121, 26);
-            this.txtLegendaryCount.TabIndex = 10;
-            this.txtLegendaryCount.Text = "1";
-            this.txtLegendaryCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtLegendaryCount.TextChanged += new System.EventHandler(this.txtLegendaryCount_TextChanged);
-            // 
-            // lblLegendaryCount
-            // 
-            this.lblLegendaryCount.AutoSize = true;
-            this.lblLegendaryCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLegendaryCount.Location = new System.Drawing.Point(4, 360);
-            this.lblLegendaryCount.Name = "lblLegendaryCount";
-            this.lblLegendaryCount.Size = new System.Drawing.Size(219, 20);
-            this.lblLegendaryCount.TabIndex = 99;
-            this.lblLegendaryCount.Text = "Max Legendarys per Team";
             // 
             // frmMain
             // 
